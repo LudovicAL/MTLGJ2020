@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 321530641}
   - component: {fileID: 321530640}
   - component: {fileID: 321530642}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rope(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 828430792}
   - component: {fileID: 828430794}
   - component: {fileID: 828430798}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rope(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 934555574}
   - component: {fileID: 934555573}
   - component: {fileID: 934555575}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rope(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -664,7 +664,7 @@ GameObject:
   - component: {fileID: 937817629}
   - component: {fileID: 937817628}
   - component: {fileID: 937817630}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rope(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,7 +832,7 @@ GameObject:
   - component: {fileID: 960004671}
   - component: {fileID: 960004670}
   - component: {fileID: 960004672}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rope(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1083,7 +1083,7 @@ GameObject:
   - component: {fileID: 1148333260}
   - component: {fileID: 1148333259}
   - component: {fileID: 1148333261}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rope(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1251,7 +1251,7 @@ GameObject:
   - component: {fileID: 1400612509}
   - component: {fileID: 1400612508}
   - component: {fileID: 1400612510}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rope(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1419,7 +1419,7 @@ GameObject:
   - component: {fileID: 1626803704}
   - component: {fileID: 1626803703}
   - component: {fileID: 1626803705}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rope(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1587,7 +1587,7 @@ GameObject:
   - component: {fileID: 1788331684}
   - component: {fileID: 1788331683}
   - component: {fileID: 1788331685}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rope(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1755,7 +1755,7 @@ GameObject:
   - component: {fileID: 1814931808}
   - component: {fileID: 1814931807}
   - component: {fileID: 1814931809}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rope(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1923,7 +1923,7 @@ GameObject:
   - component: {fileID: 1847264812}
   - component: {fileID: 1847264811}
   - component: {fileID: 1847264813}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rope(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

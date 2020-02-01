@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 480078}
   - component: {fileID: 21258464}
   - component: {fileID: 6143046}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
