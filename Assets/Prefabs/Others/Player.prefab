@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 4102429441477180870}
   - component: {fileID: 2434474084754040546}
   - component: {fileID: -6157545252899425522}
+  - component: {fileID: 4166512559752629666}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -202,7 +203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb30751d80602074ab76f63ba93f32e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerId: 0
   crosshair: {fileID: 2651731621801256742}
   crosshairDistance: 2
   arrowSpeed: 0
@@ -279,6 +279,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerId: {fileID: 0}
-  playerActions: {fileID: 0}
-  playerHealth: {fileID: 0}
-  playerHealthBar: {fileID: 0}
+  playerControler: {fileID: 0}
+--- !u!58 &4166512559752629666
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2651731622576822621}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
