@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5860294100419167076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5786781718176940608}
+  - component: {fileID: 7937326819978359923}
+  - component: {fileID: 4913298806939740860}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5786781718176940608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5860294100419167076}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &7937326819978359923
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5860294100419167076}
+  m_Enabled: 1
+--- !u!114 &4913298806939740860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5860294100419167076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1b3c13fe35ef34d8337b3dfe3f46cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxNbAudioSources: 15
+  themeSongVolume: 0.3
+  themeClip: {fileID: 8300000, guid: 04799b296f19b224282d40eac01830d0, type: 3}
+  menuClickClip: {fileID: 8300000, guid: 40830bc5ee4d0b449b8e729cf2a390f1, type: 3}
+  playerJoiningClip: {fileID: 8300000, guid: 8039c63f75821a140a7a915ca8bd1335, type: 3}
+  playerLeavingClip: {fileID: 8300000, guid: 44d7d3f97ed49b14b8f47c935321b883, type: 3}
+  ticTacClip: {fileID: 8300000, guid: 90d2132fac67106449bd37fd5df75c06, type: 3}
+  VictoryClip: {fileID: 8300000, guid: 12225fb38c1ced5478c3ada35b9b0ebb, type: 3}
+  WarningClip: {fileID: 8300000, guid: d48a40f4a9fb9d84c8cf230c5f882d78, type: 3}
+  listOfMiscClips:
+  - {fileID: 8300000, guid: de80b17080e8fc74b99e06f6fd6ff13a, type: 3}
+  - {fileID: 8300000, guid: ba4ba8f5228bb634999b350dd5d4fcfc, type: 3}
