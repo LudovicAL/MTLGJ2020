@@ -13,8 +13,6 @@ public class GameStatesManager : MonoBehaviour {
 		Pausing, //Game is paused
 		Ending  //Game is ending
 	};
-
-	public AvailableGameStates currentGameState = AvailableGameStates.Menu;
 	
     //The following variable contains the current GameState.
 	public AvailableGameStates gameState {get; private set;}
@@ -34,6 +32,7 @@ public class GameStatesManager : MonoBehaviour {
 	//Call this function from anywhere to request a game state change
 	public void ChangeGameStateTo(AvailableGameStates desiredState) {
 		gameState = desiredState;
+		Debug.Log(gameState.ToString());
 		EventsManager.Instance.gameStateChanges.Invoke();
 	}
 }

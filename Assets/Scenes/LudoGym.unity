@@ -121,29 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &624435898 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3144882332818279473, guid: 8d4d1c9d49862384f9bce0d12d400d01,
-    type: 3}
-  m_PrefabInstance: {fileID: 1443642686}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &624435900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624435898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb9e46adcb130624f87047ced024f9c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraOffset: {x: 0, y: 0, z: -20}
-  smoothTime: 0.5
-  minZoom: 5
-  maxZoom: 20
-  zoomLimiter: 40
 --- !u!1001 &863843593
 PrefabInstance:
   m_ObjectHideFlags: 0
