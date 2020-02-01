@@ -8,7 +8,7 @@ using System;
 
 //TODO Хотелось бы сделать красивее инспектор, только не знаю что именно красить то..)
 
-[CustomEditor(typeof(Chain))]
+//[CustomEditor(typeof(Chain))]
 [CanEditMultipleObjects]
 public class ChainEditor : Editor
 {

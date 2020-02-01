@@ -6,6 +6,7 @@ public class Grabbable : MonoBehaviour
 {
     // TODO: change owner speed
     public float speed = 3f;
+    public float dropDistance = 1f;
     [HideInInspector]
     public PlayerControler owner;
     private Rigidbody2D rigidBody;
@@ -25,7 +26,16 @@ public class Grabbable : MonoBehaviour
             return;
         }
 
-        Vector2 direction = (Vector2)owner.transform.position - rigidBody.position;
+        Vector2 direction = ((Vector2)owner.transform.position - rigidBody.position);
+        if (direction.sqrMagnitude > dropDistance * dropDistance)
+        {
+
+            owner.DropGrabbedObject();
+            rigidBody.velocity = Vector2.zero;
+            return;
+        }
+
+        direction = direction.normalized;
         rigidBody.velocity = direction * speed;
     }
 }

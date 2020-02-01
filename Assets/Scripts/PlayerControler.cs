@@ -80,7 +80,8 @@ public class PlayerControler : MonoBehaviour {
 	/// Moves the character around
 	/// </summary>
 	private void Move() {
-		rb.velocity = movementDirection * movementSpeed * movementSpeedMultiplicator;
+		float speed = grabbedObject ? grabbedObject.speed : movementSpeed * movementSpeedMultiplicator;
+		rb.velocity = movementDirection * speed;
 	}
 
 	/// <summary>
@@ -164,10 +165,15 @@ public class PlayerControler : MonoBehaviour {
 			}
 			else // drop
 			{
-				grabbedObject.owner = null;
-				grabbedObject = null;
+				DropGrabbedObject();
 			}
 		}
+	}
+
+	public void DropGrabbedObject()
+	{
+		grabbedObject.owner = null;
+		grabbedObject = null;
 	}
 
 	/// <summary>

@@ -13,7 +13,7 @@ public enum ChainMode
     Random,
 }
 
-[ExecuteInEditMode]
+//[ExecuteInEditMode]
 public class Chain : MonoBehaviour
 {
     //public bool reset = false;
