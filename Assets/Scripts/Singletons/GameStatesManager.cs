@@ -14,10 +14,7 @@ public class GameStatesManager : MonoBehaviour {
 		Ending  //Game is ending
 	};
 
-	public AvailableGameStates gameStateAtLaunch = AvailableGameStates.Menu;
-
-    //The emitter
-    public UnityEvent GameStateChanged;
+	public AvailableGameStates currentGameState = AvailableGameStates.Menu;
 	
     //The following variable contains the current GameState.
 	public AvailableGameStates gameState {get; private set;}
@@ -26,24 +23,17 @@ public class GameStatesManager : MonoBehaviour {
 
     void Awake() {
         //Makes this script a singleton
-
         if (Instance == null) {
             Instance = this;
         } else if (Instance != this) {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
-
-        //Sets the GameState at launch
-        ChangeGameStateTo(gameStateAtLaunch);
-
-        //Registers the events
-        GameStateChanged = new UnityEvent();       
+        DontDestroyOnLoad(gameObject);  
     }
 
 	//Call this function from anywhere to request a game state change
 	public void ChangeGameStateTo(AvailableGameStates desiredState) {
 		gameState = desiredState;
-		GameStateChanged.Invoke ();
+		EventsManager.Instance.gameStateChanges.Invoke();
 	}
 }

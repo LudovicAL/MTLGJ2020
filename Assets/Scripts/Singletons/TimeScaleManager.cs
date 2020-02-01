@@ -24,10 +24,8 @@ public class TimeScaleManager : MonoBehaviour {
 	// Start is called before the first frame update
 	void Start() {
 		currentId = 0;
-		if (GameStatesManager.Instance != null) {
-			GameStatesManager.Instance.GameStateChanged.AddListener(OnGameStateChange);
-			OnGameStateChange();
-		}
+		EventsManager.Instance.gameStateChanges.AddListener(OnGameStateChanges);
+		OnGameStateChanges();
 	}
 
 	// Update is called once per frame
@@ -35,7 +33,7 @@ public class TimeScaleManager : MonoBehaviour {
 		//plot.AddKey(Time.realtimeSinceStartup, Time.timeScale);
 	}
 
-	private void OnGameStateChange() {
+	private void OnGameStateChanges() {
 		switch (GameStatesManager.Instance.gameState) {
 			case (GameStatesManager.AvailableGameStates.Menu):
 

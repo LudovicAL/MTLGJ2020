@@ -22,8 +22,9 @@ public class CanvasManager : MonoBehaviour {
 
 	// Start is called before the first frame update
 	void Start() {
-		GameStatesManager.Instance.GameStateChanged.AddListener(OnGameStateChange);
-		OnGameStateChange();
+		EventsManager.Instance.gameStateChanges.AddListener(OnGameStateChanges);
+		EventsManager.Instance.playerJoinsGame.AddListener(OnPlayerJoinsGame);
+		EventsManager.Instance.playerLeavesGame.AddListener(OnPlayerLeavesGame);
 	}
 
 	// Update is called once per frame
@@ -32,7 +33,7 @@ public class CanvasManager : MonoBehaviour {
 	}
 
 	//Called when the GameState changes
-	private void OnGameStateChange() {
+	private void OnGameStateChanges() {
 		switch (GameStatesManager.Instance.gameState) {
 			case (GameStatesManager.AvailableGameStates.Menu):
 				ShowPanel("Panel Menu");
@@ -58,5 +59,13 @@ public class CanvasManager : MonoBehaviour {
 		panelPlaying.SetActive(panelPlaying.name.Equals(panelName));
 		panelPausing.SetActive(panelPausing.name.Equals(panelName));
 		panelEnding.SetActive(panelEnding.name.Equals(panelName));
+	}
+
+	private void OnPlayerJoinsGame(PlayerId playerId, bool gameFull) {
+		
+	}
+
+	private void OnPlayerLeavesGame(PlayerId playerId) {
+		
 	}
 }

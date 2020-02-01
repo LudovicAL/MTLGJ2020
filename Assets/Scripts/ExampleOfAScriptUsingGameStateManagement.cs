@@ -5,7 +5,8 @@ public class ExampleOfAScriptUsingGameStateManagement : MonoBehaviour {
 
 	//A listener is placed on Start()
 	void Start () {
-        GameStatesManager.Instance.GameStateChanged.AddListener(OnGameStateChange);
+        EventsManager.Instance.gameStateChanges.AddListener(OnGameStateChanges);
+		OnGameStateChanges();
 	}
 		
 	//Here is an example of how to execute stuff only when a specified GameState is on
@@ -16,7 +17,7 @@ public class ExampleOfAScriptUsingGameStateManagement : MonoBehaviour {
 	}
 
 	//Called when the GameState changes
-	private void OnGameStateChange() {
+	private void OnGameStateChanges() {
 		switch (GameStatesManager.Instance.gameState) {
             case (GameStatesManager.AvailableGameStates.Menu):
                 break;

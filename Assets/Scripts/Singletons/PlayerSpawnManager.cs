@@ -18,8 +18,8 @@ public class PlayerSpawnManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PlayerListManager.Instance.playerJoining.AddListener(OnPlayerJoining);
-		PlayerListManager.Instance.playerLeaving.AddListener(OnPlayerLeaving);
+		EventsManager.Instance.playerJoinsGame.AddListener(OnPlayerJoining);
+		EventsManager.Instance.playerLeavesGame.AddListener(OnPlayerLeaving);
 	}
 
 	private void OnPlayerJoining(PlayerId playerId, bool gameFull) {

@@ -46,6 +46,7 @@ public class AudioManager : MonoBehaviour {
 
 	private List<AudioSource> availableAudioSourceList;
 	private List<AudioSource> playingAudioSourceList;
+	private AudioSource oneShotAudioSource;
 	private int currentAudioSourceCount;
 
 	private void Awake() {
@@ -61,11 +62,12 @@ public class AudioManager : MonoBehaviour {
 		availableAudioSourceList = new List<AudioSource>();
 		playingAudioSourceList = new List<AudioSource>();
 
-		availableAudioSourceList.AddRange(GetComponents<AudioSource>());
+		oneShotAudioSource = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
+
 		currentAudioSourceCount = availableAudioSourceList.Count;
 
-		GameStatesManager.Instance.GameStateChanged.AddListener(OnGameStateChange);
-		OnGameStateChange();
+		EventsManager.Instance.gameStateChanges.AddListener(OnGameStateChanges);
+		OnGameStateChanges();
 	}
 
 	void Update() {
@@ -76,7 +78,7 @@ public class AudioManager : MonoBehaviour {
 		}
 	}
 
-	private void OnGameStateChange() {
+	private void OnGameStateChanges() {
 		switch (GameStatesManager.Instance.gameState) {
 			case (GameStatesManager.AvailableGameStates.Menu):
 
@@ -120,7 +122,14 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	/// <summary>
-	/// Plays an AudioClip with a fade in and loops it, returns the AudioSource used to play it
+	/// Plays an AudioClip with volume and pitch, returns the AudioSource used to play it
+	/// </summary>
+	public AudioSource PlayClip(AudioClip clip, float volume, float pitch) {
+		return PlayClip(clip, false, 0.0f, volume, pitch);
+	}
+
+	/// <summary>
+	/// Plays an AudioClip with a fade in, volume and pitch and loops it, returns the AudioSource used to play it
 	/// </summary>
 	public AudioSource PlayClip(AudioClip clip, bool loop, float fadeInLength, float desiredVolume, float pitch) {
 		if (clip) {
@@ -141,6 +150,17 @@ public class AudioManager : MonoBehaviour {
 		} else {
 			Debug.Log("You passed a null AudioClip. What is wrong with you?");
 			return null;
+		}
+	}
+
+	/// <summary>
+	/// Plays an AudioClip once with no possibility of pausing or stoping it but offers better performances as it uses a shared AudioSource
+	/// </summary>
+	public void PlayClipOneShot(AudioClip clip) {
+		if (clip) {
+			oneShotAudioSource.PlayOneShot(clip);
+		} else {
+			Debug.Log("You passed a null AudioClip. What is wrong with you?");
 		}
 	}
 
