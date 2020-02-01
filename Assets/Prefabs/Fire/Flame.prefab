@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1837183192761968758}
   - component: {fileID: 1995455486965000284}
   - component: {fileID: 1995664735393401106}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FireEmbers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4677,7 +4677,7 @@ GameObject:
   - component: {fileID: 1996513499872069806}
   - component: {fileID: 1833328960011092599}
   - component: {fileID: 1833328960011092598}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5334,7 +5334,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0, y: 0, z: 1}
+    m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
