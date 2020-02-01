@@ -30,9 +30,11 @@ public class PlayerControler : MonoBehaviour {
 	private bool isAiming;
 	private bool endOfAiming;
 	private bool isInterractingWithDoors;
+	private bool isGrabbing;
 	private bool audioSourceIsPaused;
 	private AudioClip currentFootStepAudioClip;
 	
+	private Grabbable grabbedObject;
 
 	void Awake() {
 		player = GetComponent<Player>();
@@ -53,6 +55,7 @@ public class PlayerControler : MonoBehaviour {
 			Aim();
 			ShootArrow();
 			InterractWithDoor();
+			TryGrab();
 		}
 	}
 
@@ -65,6 +68,7 @@ public class PlayerControler : MonoBehaviour {
 		movementDirection.Normalize();
 		isAiming = player.playerId.controls.GetButtonA();
 		endOfAiming = player.playerId.controls.GetButtonAUp();
+		isGrabbing = player.playerId.controls.GetButtonXDown();
 
 		if (isAiming) {
 			movementSpeed *= aimingPenaltyToMovementSpeed;
@@ -137,6 +141,32 @@ public class PlayerControler : MonoBehaviour {
 			//for (int i = (playerCollisionsManager.currentCollidingDoors.Count - 1); i >= 0; i--) {
 			//	playerCollisionsManager.currentCollidingDoors[i].Interract();
 			//}
+		}
+	}
+
+	private void TryGrab() {
+		if (isGrabbing)
+		{
+			// pickup
+			if (grabbedObject == null)
+			{
+				Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 1f, 1 << 12); // 12 = Grabbable
+				foreach (Collider2D hit in hits)
+				{
+					Grabbable grabComponent = hit.gameObject.GetComponent<Grabbable>();
+					if (grabComponent.owner == null)
+					{
+						grabComponent.owner = this;
+						grabbedObject = grabComponent;
+						break;
+					}
+				}
+			}
+			else // drop
+			{
+				grabbedObject.owner = null;
+				grabbedObject = null;
+			}
 		}
 	}
 
