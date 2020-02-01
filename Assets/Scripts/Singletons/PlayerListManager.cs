@@ -27,7 +27,7 @@ public class PlayerListManager : MonoBehaviour {
     }
 
 	void Update () {
-		if (GameStatesManager.Instance.currentGameState == GameStatesManager.AvailableGameStates.Menu) {
+		if (GameStatesManager.Instance.gameState == GameStatesManager.AvailableGameStates.Menu) {
 			for (int i = listOfPlayers.Count - 1; i >= 0; i--) {
 				if (listOfPlayers[i].controls.GetButtonBDown()) {
 					RemovePlayer(listOfPlayers[i]);
