@@ -10,7 +10,7 @@ public class PlayerHealthBar : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = GetComponent<Player>();
-		player.playerHealth.playerTakingDamage.AddListener(OnTakingDamage);
+		//player.playerHealth.playerTakingDamage.AddListener(OnTakingDamage);
 	}
 	
 	// Update is called once per frame

@@ -18,16 +18,16 @@ public class PlayerSpawnManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		EventsManager.Instance.playerJoinsGame.AddListener(OnPlayerJoining);
-		EventsManager.Instance.playerLeavesGame.AddListener(OnPlayerLeaving);
+		EventsManager.Instance.playerJoinsGame.AddListener(OnPlayerJoinsGame);
+		EventsManager.Instance.playerLeavesGame.AddListener(OnPlayerLeavesGame);
 	}
 
-	private void OnPlayerJoining(PlayerId playerId, bool gameFull) {
+	private void OnPlayerJoinsGame(PlayerId playerId, bool gameFull) {
 		playerId.avatar = Instantiate(avatarPrefab, playerId.spawnPosition, Quaternion.identity);
 		playerId.avatar.GetComponent<Player>().playerId = playerId;
 	}
 
-	private void OnPlayerLeaving(PlayerId playerId) {
+	private void OnPlayerLeavesGame(PlayerId playerId) {
 		if (playerId.avatar != null) {
 			Destroy(playerId.avatar);
 		}

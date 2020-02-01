@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1667194526805441579
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1667194526805441577}
+  - component: {fileID: 1667194526805441583}
+  - component: {fileID: 1667194526805441576}
+  - component: {fileID: 1667194526805441582}
+  - component: {fileID: 1667194526805441581}
+  - component: {fileID: 1667194526805441580}
+  - component: {fileID: 1667194526805441571}
+  - component: {fileID: 1667194526805441570}
+  m_Layer: 0
+  m_Name: ScriptsBucket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1667194526805441577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667194526805441579}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1667194526805441583
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667194526805441579}
+  m_Enabled: 1
+--- !u!114 &1667194526805441576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667194526805441579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1b3c13fe35ef34d8337b3dfe3f46cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxNbAudioSources: 15
+  themeSongVolume: 0.3
+  themeClip: {fileID: 0}
+  menuClickClip: {fileID: 0}
+  playerJoiningClip: {fileID: 0}
+  playerLeavingClip: {fileID: 0}
+  ticTacClip: {fileID: 0}
+  victoryClip: {fileID: 0}
+  warningClip: {fileID: 0}
+  countDownClip: {fileID: 8300000, guid: e7268e0ec77ae3e4d8e9352417c4551f, type: 3}
+  listOfMiscClips: []
+--- !u!114 &1667194526805441582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667194526805441579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc58477822bc9547bf39abfb4c42f72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentGameState: 0
+--- !u!114 &1667194526805441581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667194526805441579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49b0cf412ec245448255dd3d349ce4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelMenu: {fileID: 0}
+  panelStarting: {fileID: 0}
+  panelPlaying: {fileID: 0}
+  panelPausing: {fileID: 0}
+  panelEnding: {fileID: 0}
+  countDownText: {fileID: 0}
+--- !u!114 &1667194526805441580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667194526805441579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011bd75f040b1dc4ebf62dca2e3890f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxNumPlayers: 5
+  listOfAvailablePlayers:
+  - {fileID: 11400000, guid: 18227f4100446a14d91b1b7bb7c4d20e, type: 2}
+  - {fileID: 11400000, guid: 14cbff6b575a41041b9c0a00e2b0e8ba, type: 2}
+  - {fileID: 11400000, guid: 8964d67e0cf387a47a8d952466d29c1d, type: 2}
+  - {fileID: 11400000, guid: deb5166429a423d4daee9eea857a3bc8, type: 2}
+  - {fileID: 11400000, guid: 55666f2f6bf9eb9448a0890abd047e0a, type: 2}
+  - {fileID: 11400000, guid: 52b022adf54aa03408daf6086e844663, type: 2}
+  - {fileID: 11400000, guid: 7a2a5f11bbe16d346964d0576c9b657f, type: 2}
+  - {fileID: 11400000, guid: 6ce5789cd6d4b2144a101f80f82e2ede, type: 2}
+  - {fileID: 11400000, guid: 056f82366aa8a20458487366239202a8, type: 2}
+  - {fileID: 11400000, guid: f58b90ed5199bf54d9ba7e72c978689e, type: 2}
+  - {fileID: 11400000, guid: 1faafd47466aee54b857036deeb226f8, type: 2}
+  - {fileID: 11400000, guid: 80b1d6c1609c3014d820d92487c32d77, type: 2}
+  - {fileID: 11400000, guid: 886f23e18020366498e536cf0c4ff4e1, type: 2}
+  - {fileID: 11400000, guid: 4ef07a4d28e57d141ac3e4d00f03e262, type: 2}
+  - {fileID: 11400000, guid: a869273f3999c4347b84407a5c281597, type: 2}
+  currentPlayerCount: 0
+--- !u!114 &1667194526805441571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667194526805441579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a2c88a32fb52c4449c55d28294aba99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCollidesWithDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  playerUncollidesWithDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  playerJoinsGame:
+    m_PersistentCalls:
+      m_Calls: []
+  playerLeavesGame:
+    m_PersistentCalls:
+      m_Calls: []
+  gameStateChanges:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1667194526805441570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667194526805441579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579e4ce577e35914fa7c650f0b464366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avatarPrefab: {fileID: 2651731622576822621, guid: 81a50acae3b93454797963ffef7b1592,
+    type: 3}

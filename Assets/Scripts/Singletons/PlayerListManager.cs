@@ -38,6 +38,11 @@ public class PlayerListManager : MonoBehaviour {
 					AddPlayer(listOfAvailablePlayers[i]);
 				}
 			}
+			for (int i = 0, max = listOfPlayers.Count; i < max; i++) {
+				if (listOfPlayers[i].controls.GetButtonStartDown()) {
+					GameStatesManager.Instance.ChangeGameStateTo(GameStatesManager.AvailableGameStates.Starting);
+				}
+			}
 		}
 	}
 

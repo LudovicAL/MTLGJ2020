@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Player))]
 public class PlayerControler : MonoBehaviour {
 
-	public int playerId;
 	public GameObject crosshair;
 	public float crosshairDistance;
 	public float arrowSpeed;
@@ -20,6 +20,7 @@ public class PlayerControler : MonoBehaviour {
 	public AudioClip footStepWoodAudioClip;
 	public AudioClip bowAudioClip;
 
+	private Player player;
 	private AudioSource audioSource;
 	private Rigidbody2D rb;
 	private PlayerCollisionsManager playerCollisionsManager;
@@ -34,6 +35,7 @@ public class PlayerControler : MonoBehaviour {
 	
 
 	void Awake() {
+		player = GetComponent<Player>();
 		rb = GetComponent<Rigidbody2D>();
 		playerCollisionsManager = GetComponent<PlayerCollisionsManager>();
 		currentFootStepAudioClip = footStepDefaultAudioClip;
@@ -44,28 +46,30 @@ public class PlayerControler : MonoBehaviour {
 	}
 
 	void Update() {
-		ProcessInputs();
-		Move();
-		PlayFootsteps();
-		Aim();
-		ShootArrow();
-		InterractWithDoor();
+		if (GameStatesManager.Instance.gameState == GameStatesManager.AvailableGameStates.Playing) {
+			ProcessInputs();
+			Move();
+			PlayFootsteps();
+			Aim();
+			ShootArrow();
+			InterractWithDoor();
+		}
 	}
 
 	/// <summary>
 	/// Collects inputs given by the player
 	/// </summary>
 	private void ProcessInputs() {
-		movementDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+		movementDirection = new Vector2(player.playerId.controls.GetLHorizontal(), player.playerId.controls.GetLVertical());
 		movementSpeed = Mathf.Clamp(movementDirection.magnitude, 0.0f, 1.0f);
 		movementDirection.Normalize();
-		isAiming = Input.GetButton(InputsMap.Instance.useBow);
-		endOfAiming = Input.GetButtonUp(InputsMap.Instance.useBow);
+		isAiming = player.playerId.controls.GetButtonA();
+		endOfAiming = player.playerId.controls.GetButtonAUp();
 
 		if (isAiming) {
 			movementSpeed *= aimingPenaltyToMovementSpeed;
 		}
-		isInterractingWithDoors = Input.GetButtonDown(InputsMap.Instance.interractWithDoor);
+		isInterractingWithDoors = player.playerId.controls.GetButtonBDown();
 	}
 
 	/// <summary>

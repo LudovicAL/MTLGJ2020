@@ -36,8 +36,9 @@ public class AudioManager : MonoBehaviour {
 	public AudioClip playerJoiningClip;
 	public AudioClip playerLeavingClip;
 	public AudioClip ticTacClip;
-	public AudioClip VictoryClip;
-	public AudioClip WarningClip;
+	public AudioClip victoryClip;
+	public AudioClip warningClip;
+	public AudioClip countDownClip;
 	public List<AudioClip> listOfMiscClips;
 
 	public static AudioManager Instance {

@@ -9,7 +9,7 @@ public class AudioManagerEditor : Editor {
 
 		AudioManager audioManager = (AudioManager)target;
 		if (GUILayout.Button("PlayClip")) {
-			audioManager.PlayClip(AudioManager.Instance.VictoryClip);
+			audioManager.PlayClip(AudioManager.Instance.victoryClip);
 		}
 	}
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CanvasManager : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class CanvasManager : MonoBehaviour {
 	public GameObject panelPlaying;
 	public GameObject panelPausing;
 	public GameObject panelEnding;
+	public Text countDownText;
 	public static CanvasManager Instance { get; private set; }
 
 	private void Awake() {
@@ -23,8 +25,7 @@ public class CanvasManager : MonoBehaviour {
 	// Start is called before the first frame update
 	void Start() {
 		EventsManager.Instance.gameStateChanges.AddListener(OnGameStateChanges);
-		EventsManager.Instance.playerJoinsGame.AddListener(OnPlayerJoinsGame);
-		EventsManager.Instance.playerLeavesGame.AddListener(OnPlayerLeavesGame);
+		OnGameStateChanges();
 	}
 
 	// Update is called once per frame
@@ -40,6 +41,7 @@ public class CanvasManager : MonoBehaviour {
 				break;
 			case (GameStatesManager.AvailableGameStates.Starting):
 				ShowPanel("Panel Starting");
+				StartCoroutine(CountDown());
 				break;
 			case (GameStatesManager.AvailableGameStates.Playing):
 				ShowPanel("Panel Playing");
@@ -61,11 +63,12 @@ public class CanvasManager : MonoBehaviour {
 		panelEnding.SetActive(panelEnding.name.Equals(panelName));
 	}
 
-	private void OnPlayerJoinsGame(PlayerId playerId, bool gameFull) {
-		
-	}
-
-	private void OnPlayerLeavesGame(PlayerId playerId) {
-		
+	private IEnumerator CountDown() {
+		AudioManager.Instance.PlayClipOneShot(AudioManager.Instance.countDownClip);
+		for (int i = 3; i > 0; i--) {
+			countDownText.text = i.ToString();
+			yield return new WaitForSeconds(0.7f);
+		}
+		GameStatesManager.Instance.ChangeGameStateTo(GameStatesManager.AvailableGameStates.Playing);
 	}
 }
