@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1667194526805441583}
   - component: {fileID: 1667194526805441576}
   - component: {fileID: 1667194526805441582}
-  - component: {fileID: 1667194526805441581}
   - component: {fileID: 1667194526805441580}
   - component: {fileID: 1667194526805441571}
   - component: {fileID: 1667194526805441570}
@@ -67,6 +66,8 @@ MonoBehaviour:
   victoryClip: {fileID: 0}
   warningClip: {fileID: 0}
   countDownClip: {fileID: 8300000, guid: e7268e0ec77ae3e4d8e9352417c4551f, type: 3}
+  doorOpeningClip: {fileID: 8300000, guid: bb27d8db0018b224b8967f90302aef3c, type: 3}
+  doorClosingClip: {fileID: 8300000, guid: 12a072be6fa0fa24ebf2b6dde264a1c7, type: 3}
   listOfMiscClips: []
 --- !u!114 &1667194526805441582
 MonoBehaviour:
@@ -81,24 +82,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentGameState: 0
---- !u!114 &1667194526805441581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667194526805441579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b49b0cf412ec245448255dd3d349ce4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panelMenu: {fileID: 0}
-  panelStarting: {fileID: 0}
-  panelPlaying: {fileID: 0}
-  panelPausing: {fileID: 0}
-  panelEnding: {fileID: 0}
-  countDownText: {fileID: 0}
 --- !u!114 &1667194526805441580
 MonoBehaviour:
   m_ObjectHideFlags: 0

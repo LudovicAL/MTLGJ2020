@@ -5,11 +5,10 @@ using UnityEngine.Tilemaps;
 
 public class DoorData : MonoBehaviour {
 
-	public AudioClip doorOpeningAudioClip;
-	public AudioClip doorClosingAudioClip;
+	public bool isLocked;
 	private bool isOpen;
 	public GameObject openDoorParent;
-	public GameObject closedDoorParent;
+	public GameObject closedDoorParent;	
 
     void Start() {
         
@@ -20,13 +19,15 @@ public class DoorData : MonoBehaviour {
     }
 
 	public void Interract() {
-		isOpen = !isOpen;
-		openDoorParent.SetActive(isOpen);
-		closedDoorParent.SetActive(!isOpen);
-		if (isOpen) {
-			AudioManager.Instance.PlayClipOneShot(doorOpeningAudioClip);
-		} else {
-			AudioManager.Instance.PlayClipOneShot(doorClosingAudioClip);
+		if (!isLocked) {
+			isOpen = !isOpen;
+			openDoorParent.SetActive(isOpen);
+			closedDoorParent.SetActive(!isOpen);
+			if (isOpen) {
+				AudioManager.Instance.PlayClipOneShot(AudioManager.Instance.doorClosingClip);
+			} else {
+				AudioManager.Instance.PlayClipOneShot(AudioManager.Instance.doorOpeningClip);
+			}
 		}
 	}
 }
