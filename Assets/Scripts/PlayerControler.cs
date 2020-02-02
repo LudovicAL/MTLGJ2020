@@ -20,6 +20,7 @@ public class PlayerControler : MonoBehaviour {
 	public AudioClip footStepDefaultAudioClip;
 	public AudioClip footStepWoodAudioClip;
 	public AudioClip bowAudioClip;
+	[HideInInspector]public bool isAxing;
 
 	private Player player;
 	private AudioSource audioSource;
@@ -30,7 +31,6 @@ public class PlayerControler : MonoBehaviour {
 	private float movementSpeed;
 	private bool isAiming;
 	private bool endOfAiming;
-	private bool isAxing;
 	private bool isGrabbing;
 	private bool audioSourceIsPaused;
 	private AudioClip currentFootStepAudioClip;
@@ -74,7 +74,6 @@ public class PlayerControler : MonoBehaviour {
 		if (isAiming) {
 			movementSpeed *= aimingPenaltyToMovementSpeed;
 		}
-		isAxing = player.playerId.controls.GetButtonB();
 	}
 
 	/// <summary>
