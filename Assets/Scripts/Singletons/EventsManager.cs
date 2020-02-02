@@ -84,6 +84,7 @@ public class EventsManager : MonoBehaviour {
 		}
 		if (victimSaved == null) {
 			victimSaved = new VictimSaved();
+		}
 		if (houseAppears == null) {
 			houseAppears = new HouseAppears();
 		}
