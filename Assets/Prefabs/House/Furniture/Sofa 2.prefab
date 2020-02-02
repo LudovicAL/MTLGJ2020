@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ced554fe3c0445c46a26d488d56d4156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flammableObjectData: {fileID: 11400000, guid: 0f7345fd95c51a041984914ecebcc464,
+  _flammableObjectData: {fileID: 11400000, guid: 6a3de812c4ba6264891d272329cd1d27,
     type: 2}
   _isOnFire: 0
   _fireDamage: 0.01

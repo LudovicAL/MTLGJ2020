@@ -29,7 +29,6 @@ public class CanvasManager : MonoBehaviour {
 
 		EventsManager.Instance.gameStateChanges.AddListener(OnGameStateChanges);
 		EventsManager.Instance.houseIntegrityChanges.AddListener(HouseIntegrityChanges);
-		SetHouseIntegrity();
 		OnGameStateChanges();
 	}
 
@@ -68,6 +67,7 @@ public class CanvasManager : MonoBehaviour {
 				break;
 			case (GameStatesManager.AvailableGameStates.Playing):
 				ShowPanel("Panel Playing");
+				SetHouseIntegrity();
 				break;
 			case (GameStatesManager.AvailableGameStates.Pausing):
 				ShowPanel("Panel Pausing");
