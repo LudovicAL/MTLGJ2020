@@ -42,7 +42,7 @@ public class GameStartManager : MonoBehaviour {
 	}
 
 	private void SpawnHouse() {
-		GameObject house = Instantiate(availableHouses[Random.Range(0, availableHouses.Count - 1)], Vector3.zero, Quaternion.identity);
+		GameObject house = Instantiate(availableHouses[Random.Range(0, availableHouses.Count)], Vector3.zero, Quaternion.identity);
 		GameObject[] spawnList = GameObject.FindGameObjectsWithTag("SpawnPoint");
 		for (int i = 0, max = PlayerListManager.Instance.listOfPlayers.Count; i < max; i++) {
 			PlayerListManager.Instance.listOfPlayers[i].avatar.transform.position = spawnList[i].transform.position;
