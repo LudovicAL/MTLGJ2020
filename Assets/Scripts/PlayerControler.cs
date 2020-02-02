@@ -141,6 +141,11 @@ public class PlayerControler : MonoBehaviour {
 		}
 	}
 
+	public bool IsAiming()
+	{
+		return crosshair.activeSelf;
+	}
+
 	/// <summary>
 	/// Shoots an arrow
 	/// </summary>
