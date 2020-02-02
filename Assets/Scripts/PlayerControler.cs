@@ -109,8 +109,7 @@ public class PlayerControler : MonoBehaviour {
 	/// </summary>
 	private void Animate() {
 		//Pour animer un personnage, voir https://www.youtube.com/watch?v=yfsqai3ivyA
-		animator.SetFloat("Horizontal", movementDirection.x);
-		animator.SetFloat("Vertical", movementDirection.y);
+		animator.SetFloat("Velocity", rb.velocity.magnitude);
 	}
 
 	/// <summary>
