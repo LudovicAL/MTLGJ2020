@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - HouseIntegritySlider
   - Victim
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
@@ -64,4 +65,7 @@ TagManager:
     locked: 0
   - name: Fire
     uniqueID: 3804908061
+    locked: 0
+  - name: DoorFrame
+    uniqueID: 3454927635
     locked: 0
