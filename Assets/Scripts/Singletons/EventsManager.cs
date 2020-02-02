@@ -34,9 +34,7 @@ public class HouseIntegrityChanges : UnityEvent {
 
 }
 
-public class VictimSaved : UnityEvent {
-	public int numVictims;
-	public int savedVictims;
+public class VictimSaved : UnityEvent<int, int> { // arg0 numSaved, arg1 total
 }
 
 public class HouseAppears : UnityEvent {
