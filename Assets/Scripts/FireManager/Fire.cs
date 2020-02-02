@@ -28,7 +28,7 @@ public class Fire : MonoBehaviour
             Vector3 destination = collider.transform.position;
             Vector3 direction = destination - source;
 
-            RaycastHit2D hit = Physics2D.Raycast(source, direction);
+            RaycastHit2D hit = Physics2D.Raycast(source, direction, 1.0f, 1 << 13);
             if (hit.collider != null){
                 FlammableObject hitFlammableObject = hit.transform.gameObject.GetComponent<FlammableObject>();
                 if (hitFlammableObject != null)
@@ -39,6 +39,8 @@ public class Fire : MonoBehaviour
                     }
                 }
 
+            } else {
+                flammableObject._isOnFire = true;
             }
         }
     }

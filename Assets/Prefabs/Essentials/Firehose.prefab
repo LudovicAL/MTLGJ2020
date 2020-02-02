@@ -1027,7 +1027,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.86, y: 0}
-  m_ConnectedAnchor: {x: -0.63984394, y: 0.011789322}
+  m_ConnectedAnchor: {x: -0.63984346, y: 0.011789322}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1051,7 +1051,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.86, y: 0}
-  m_ConnectedAnchor: {x: -0.63984394, y: 0.011789322}
+  m_ConnectedAnchor: {x: -0.63984346, y: 0.011789322}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1075,7 +1075,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.86, y: 0}
-  m_ConnectedAnchor: {x: -0.63984394, y: 0.011789322}
+  m_ConnectedAnchor: {x: -0.63984346, y: 0.011789322}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1099,7 +1099,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.86, y: 0}
-  m_ConnectedAnchor: {x: -0.63984394, y: 0.011789322}
+  m_ConnectedAnchor: {x: -0.63984346, y: 0.011789322}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -4043,7 +4043,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.86, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0.0000009536743}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -4492,7 +4492,7 @@ PrefabInstance:
     - target: {fileID: 984329133776170787, guid: 03fd947714df5f049b2f4eb82d765254,
         type: 3}
       propertyPath: CollisionModule.collidesWith.m_Bits
-      value: 12817
+      value: 45073
       objectReference: {fileID: 0}
     - target: {fileID: 984329133776170787, guid: 03fd947714df5f049b2f4eb82d765254,
         type: 3}
@@ -4559,6 +4559,11 @@ PrefabInstance:
       propertyPath: CollisionModule.radiusScale
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: 984329133776170787, guid: 03fd947714df5f049b2f4eb82d765254,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 984336663822511935, guid: 03fd947714df5f049b2f4eb82d765254,
         type: 3}
       propertyPath: moveWithTransform
@@ -4579,10 +4584,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: HoseStream
       objectReference: {fileID: 0}
+    - target: {fileID: 1085453376418957249, guid: 03fd947714df5f049b2f4eb82d765254,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 1087981108729923813, guid: 03fd947714df5f049b2f4eb82d765254,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7327566
+      value: 3.59
       objectReference: {fileID: 0}
     - target: {fileID: 1087981108729923813, guid: 03fd947714df5f049b2f4eb82d765254,
         type: 3}

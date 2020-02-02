@@ -2,7 +2,6 @@
 
 public class FlammableObject : MonoBehaviour
 {
-    public FireManager _fireManager;
     public FlammableObjectData _flammableObjectData;
     public bool _isOnFire;
     public float _fireDamage = 0.01f;
@@ -26,9 +25,9 @@ public class FlammableObject : MonoBehaviour
         if (_currentHitPoints <= 0)
         {
             if (_flammableObjectData.isExplodingOnDeath){
-                _fireManager.SpawnExplosion(gameObject, _flammableObjectData.explosionRadius);
+                FireManager.Instance.SpawnExplosion(gameObject, _flammableObjectData.explosionRadius);
             } else {
-                _fireManager.SpawnFire(gameObject, _flammableObjectData.fireRadius);
+                FireManager.Instance.SpawnFire(gameObject, _flammableObjectData.fireRadius);
             }
             Destroy(gameObject);
         } else if (_currentHitPoints < _maxHitPoints) {
