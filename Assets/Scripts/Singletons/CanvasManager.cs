@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class CanvasManager : MonoBehaviour {
 
@@ -13,7 +14,7 @@ public class CanvasManager : MonoBehaviour {
 	public GameObject panelEnding;
 	public Text countDownText;
 	public static CanvasManager Instance { get; private set; }
-	private TextMeshPro victimsText;
+	private TMP_Text victimsText;
 	private GameObject _houseIntegritySlider;
 
 	private void Awake() {
@@ -27,15 +28,24 @@ public class CanvasManager : MonoBehaviour {
 
 	// Start is called before the first frame update
 	void Start() {
-		victimsText = transform.Find("Panel Playing").Find("VictimText").GetComponent<TextMeshPro>();
+		victimsText = transform.Find("Panel Playing").Find("VictimText").GetComponent<TMP_Text>();
 		EventsManager.Instance.gameStateChanges.AddListener(OnGameStateChanges);
 		EventsManager.Instance.houseIntegrityChanges.AddListener(HouseIntegrityChanges);
 		EventsManager.Instance.victimSaved.AddListener(VictimSaved);
 		OnGameStateChanges();
 	}
 
-	// Update is called once per frame
-	void Update() {
+    private void VictimSaved(int arg0, int arg1)
+    {
+        Debug.Log("canvas victim saved");
+		if (victimsText != null) {
+        	Debug.Log("has text");
+			victimsText.text = $"victims: {arg0}/{arg1}";
+		}
+    }
+
+    // Update is called once per frame
+    void Update() {
 
 	}
 
@@ -88,13 +98,6 @@ public class CanvasManager : MonoBehaviour {
 				image.color.g - _houstIntegrityIncrement,
 				image.color.b - _houstIntegrityIncrement
 			);
-		}
-	}
-
-	private void VictimSaved()
-	{
-		if (victimsText != null) {
-			victimsText.text = $"victims: {EventsManager.Instance.victimSaved.savedVictims}/{EventsManager.Instance.victimSaved.numVictims}";
 		}
 	}
 
