@@ -8,6 +8,10 @@ public class AxeCollisionsManager : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D collider) {
 		FlammableObject flammableObject = collider.gameObject.GetComponent<FlammableObject>();
 		if (flammableObject != null && flammableObject._flammableObjectData.isBreakable)
+		{
+			flammableObject._isOnFire = false;
 			flammableObject._currentHitPoints -= axeDamage;
+		}
+
 	}
 }

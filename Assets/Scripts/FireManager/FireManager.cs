@@ -31,7 +31,7 @@ public class FireManager : MonoBehaviour
         var shape = _fire.GetComponent<ParticleSystem>().shape;
         shape.scale = new Vector3(radius, radius, 1.0f);
         Vector3 position = source.transform.position;
-        position.z = Random.Range(-20.0f, -0.0f);
+        position.z = Random.Range(-5.0f, -0.0f);
         Instantiate(_fire, position, Quaternion.Euler(new Vector3(0, 180, 0)));
     }
     
