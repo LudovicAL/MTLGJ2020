@@ -72,7 +72,7 @@ public class Safezone : MonoBehaviour
 
         int numSaved = 0;
         foreach (GameObject victim in victims)
-            if (victim != null) numSaved++;
+            if (victim == null) numSaved++;
 
         EventsManager.Instance.victimSaved.savedVictims = numSaved;
         EventsManager.Instance.victimSaved.numVictims = victims.Length;
