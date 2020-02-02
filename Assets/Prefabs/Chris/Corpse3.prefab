@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 2442551433910326054}
   - component: {fileID: 2442551433910326053}
   - component: {fileID: 2442551433910326055}
-  m_Layer: 16
+  - component: {fileID: 6432636459413979734}
+  m_Layer: 12
   m_Name: C3-rigthfoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +131,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -153,7 +154,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.058003902, y: -0.13534188}
-  m_ConnectedAnchor: {x: 0.47505975, y: 0.6640474}
+  m_ConnectedAnchor: {x: 0.4750601, y: 0.6640477}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -162,6 +163,22 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -25.123243
     m_UpperAngle: 25.874477
+--- !u!114 &6432636459413979734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442551433910326058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65ac1b0ee5c4b648a8a594363632265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  dropDistance: 2
+  owner: {fileID: 0}
+  attachOffset: {x: 0, y: 0}
 --- !u!1 &2442551434083552719
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +192,8 @@ GameObject:
   - component: {fileID: 2442551434083552715}
   - component: {fileID: 2442551434083552714}
   - component: {fileID: 2442551434083552708}
-  m_Layer: 16
+  - component: {fileID: 8326666490514045561}
+  m_Layer: 12
   m_Name: C3-rigthhand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +313,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -318,7 +336,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.12567472, y: 0.16434407}
-  m_ConnectedAnchor: {x: 0.15562032, y: -0.110555604}
+  m_ConnectedAnchor: {x: 0.15562032, y: -0.11055553}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -327,6 +345,22 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -11.2090435
     m_UpperAngle: 8.186127
+--- !u!114 &8326666490514045561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442551434083552719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65ac1b0ee5c4b648a8a594363632265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  dropDistance: 2
+  owner: {fileID: 0}
+  attachOffset: {x: 0, y: 0}
 --- !u!1 &2442551434430150463
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +374,8 @@ GameObject:
   - component: {fileID: 2442551434430150459}
   - component: {fileID: 2442551434430150458}
   - component: {fileID: 2442551434430150452}
-  m_Layer: 16
+  - component: {fileID: 938791476}
+  m_Layer: 12
   m_Name: C3-leftarm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +492,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -480,7 +515,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.11600757}
-  m_ConnectedAnchor: {x: -0.53994226, y: -0.8086009}
+  m_ConnectedAnchor: {x: -0.5399423, y: -0.8086008}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -489,6 +524,22 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -60.88382
     m_UpperAngle: 64.46937
+--- !u!114 &938791476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442551434430150463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65ac1b0ee5c4b648a8a594363632265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  dropDistance: 2
+  owner: {fileID: 0}
+  attachOffset: {x: 0, y: 0}
 --- !u!1 &2442551434629766285
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,7 +553,8 @@ GameObject:
   - component: {fileID: 2442551434629766281}
   - component: {fileID: 2442551434629766280}
   - component: {fileID: 2442551434629766282}
-  m_Layer: 16
+  - component: {fileID: 6928224614835244186}
+  m_Layer: 12
   m_Name: C3-lefthand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +673,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -644,7 +696,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.07733822, y: 0.06767106}
-  m_ConnectedAnchor: {x: -0.13777065, y: -0.22124533}
+  m_ConnectedAnchor: {x: -0.13777046, y: -0.22124538}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -653,6 +705,22 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -8.680222
     m_UpperAngle: 7.4669952
+--- !u!114 &6928224614835244186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442551434629766285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65ac1b0ee5c4b648a8a594363632265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  dropDistance: 2
+  owner: {fileID: 0}
+  attachOffset: {x: 0, y: 0}
 --- !u!1 &2442551434839502016
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,7 +733,7 @@ GameObject:
   - component: {fileID: 2442551434839502017}
   - component: {fileID: 2442551434839502044}
   - component: {fileID: 2442551434839502019}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: c3-body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -807,7 +875,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -828,7 +896,7 @@ GameObject:
   - component: {fileID: 2442551435146362811}
   - component: {fileID: 2442551435146362810}
   - component: {fileID: 2442551435146362804}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: C3-Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -912,7 +980,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -980,7 +1048,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.02131176, y: 0.14917994}
-  m_ConnectedAnchor: {x: -0.059632353, y: -0.39343107}
+  m_ConnectedAnchor: {x: -0.05963184, y: -0.3934311}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1002,7 +1070,8 @@ GameObject:
   - component: {fileID: 2442551435222648239}
   - component: {fileID: 2442551435222648238}
   - component: {fileID: 2442551435222648232}
-  m_Layer: 16
+  - component: {fileID: 3323799550677016984}
+  m_Layer: 12
   m_Name: C3-leftfoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1122,7 +1191,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -1145,7 +1214,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.06767082, y: -0.22234774}
-  m_ConnectedAnchor: {x: -0.06961488, y: 0.6960414}
+  m_ConnectedAnchor: {x: -0.06961511, y: 0.6960412}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1154,6 +1223,22 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -28.4927
     m_UpperAngle: 26.658352
+--- !u!114 &3323799550677016984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442551435222648211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65ac1b0ee5c4b648a8a594363632265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  dropDistance: 2
+  owner: {fileID: 0}
+  attachOffset: {x: 0, y: 0}
 --- !u!1 &2442551435398367936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,7 +1252,8 @@ GameObject:
   - component: {fileID: 2442551435398367964}
   - component: {fileID: 2442551435398367939}
   - component: {fileID: 2442551435398367965}
-  m_Layer: 16
+  - component: {fileID: 1948248095}
+  m_Layer: 12
   m_Name: C3-rigtharm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1285,7 +1371,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -1308,7 +1394,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.10633993, y: 0.18367887}
-  m_ConnectedAnchor: {x: 0.41535243, y: -0.6311945}
+  m_ConnectedAnchor: {x: 0.41535243, y: -0.6311944}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1317,6 +1403,22 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -67.03467
     m_UpperAngle: 60.825115
+--- !u!114 &1948248095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442551435398367936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65ac1b0ee5c4b648a8a594363632265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  dropDistance: 2
+  owner: {fileID: 0}
+  attachOffset: {x: 0, y: 0}
 --- !u!1 &7151666463770326664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,7 +1428,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3454132328064549234}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Corpse3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1342,7 +1444,7 @@ Transform:
   m_GameObject: {fileID: 7151666463770326664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.4269643, y: 3.0403483, z: -80.09881}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3886, y: 1.3886, z: 1.3886}
   m_Children:
   - {fileID: 2442551434839502018}
   - {fileID: 2442551434430150457}
