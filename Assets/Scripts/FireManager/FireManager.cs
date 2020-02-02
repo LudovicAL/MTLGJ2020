@@ -35,7 +35,6 @@ public class FireManager : MonoBehaviour
 
     public void SpawnDestroyedTile(GameObject source, GameObject[] target) {
         if (target != null) {
-            Debug.Log("OK");
             int index = Random.Range (0, target.Length);
             Instantiate(target[index], source.transform.position, Quaternion.identity);
         }

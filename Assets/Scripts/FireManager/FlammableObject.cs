@@ -8,7 +8,7 @@ public class FlammableObject : MonoBehaviour
     public float _currentHitPoints;
     public float _maxHitPoints = 0;
 
-    void Start()
+    void Awake()
     {
         gameObject.tag = "Flammable";
         _maxHitPoints = _flammableObjectData.hitPoints + UnityEngine.Random.Range(
@@ -44,7 +44,6 @@ public class FlammableObject : MonoBehaviour
     void SpawnReplacement(GameObject source)
     {
         GameObject[] target;
-        Debug.Log(source.layer);
         switch (source.layer)
         {
             case 9: // Magic number for layer ground
