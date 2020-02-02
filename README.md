@@ -17,6 +17,6 @@ RAF:<br>
   Les victimes peuvent être sauvées lorsqu'elles sont ramenées au camion de pompier (Aurelie)<br>
   Les victimes ragdoll (Chris)<br>
   Explosion (Chris)<br>
-  Fire extinguisher<br>
+  Fire extinguisher (Aurelie)<br>
   Il y a un camion de pompier<br>
   Le camion de pompier peut être conduit/déplacé<br>
