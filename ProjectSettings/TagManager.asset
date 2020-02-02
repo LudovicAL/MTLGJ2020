@@ -27,7 +27,7 @@ TagManager:
   - FireSource
   - Player
   - Corpse
-  - 
+  - Furniture
   - 
   - 
   - 
@@ -47,6 +47,9 @@ TagManager:
     locked: 0
   - name: Floor
     uniqueID: 2762943735
+    locked: 0
+  - name: Furniture
+    uniqueID: 2486901253
     locked: 0
   - name: Character
     uniqueID: 2639229113
