@@ -30,7 +30,7 @@ public class PlayerControler : MonoBehaviour {
 	private float movementSpeed;
 	private bool isAiming;
 	private bool endOfAiming;
-	private bool isInterractingWithDoors;
+	private bool isAxing;
 	private bool isGrabbing;
 	private bool audioSourceIsPaused;
 	private AudioClip currentFootStepAudioClip;
@@ -74,7 +74,7 @@ public class PlayerControler : MonoBehaviour {
 		if (isAiming) {
 			movementSpeed *= aimingPenaltyToMovementSpeed;
 		}
-		isInterractingWithDoors = player.playerId.controls.GetButtonBDown();
+		isAxing = player.playerId.controls.GetButtonB();
 	}
 
 	/// <summary>
@@ -110,6 +110,7 @@ public class PlayerControler : MonoBehaviour {
 	private void Animate() {
 		//Pour animer un personnage, voir https://www.youtube.com/watch?v=yfsqai3ivyA
 		animator.SetFloat("Velocity", rb.velocity.magnitude);
+		animator.SetBool("IsAxing", isAxing);
 		var angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg + 90.0f;
 		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 	}
