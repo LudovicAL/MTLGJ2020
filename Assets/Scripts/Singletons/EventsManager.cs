@@ -52,9 +52,7 @@ public class EventsManager : MonoBehaviour {
 			Destroy(gameObject);
 		}
 		DontDestroyOnLoad(gameObject);
-	}
 
-	void Start() {
 		if (playerCollidesWithDoor == null) {
 			playerCollidesWithDoor = new PlayerCollidesWithDoor();
 		}
