@@ -65,7 +65,7 @@ public class CanvasManager : MonoBehaviour {
 
 	private IEnumerator CountDown() {
 		AudioManager.Instance.PlayClipOneShot(AudioManager.Instance.countDownClip);
-		for (int i = 3; i > 0; i--) {
+		for (int i = 0; i > 0; i--) {
 			countDownText.text = i.ToString();
 			yield return new WaitForSeconds(0.7f);
 		}
