@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1305497076401054581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.9, z: 1}
   m_Children: []
   m_Father: {fileID: 1305497077362869163}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 3223290067095161158, guid: 096f765679849994a83abcccdc590b7a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -146,8 +146,8 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 1.3}
-  m_ConnectedAnchor: {x: 0, y: 1.3}
+  m_Anchor: {x: 0, y: 0.33}
+  m_ConnectedAnchor: {x: 0, y: 0.33}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 1305497077362869163}
   - component: {fileID: 1305497077362869161}
   - component: {fileID: 1305497077362869162}
+  - component: {fileID: 7737370223018954039}
   m_Layer: 0
   m_Name: Door Unlocked
   m_TagString: Untagged
@@ -182,7 +183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305497077362869157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 3, z: 1}
   m_Children:
   - {fileID: 1305497076401054587}
@@ -250,7 +251,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 121307057000013791, guid: 096f765679849994a83abcccdc590b7a, type: 3}
-  m_Color: {r: 0.066037714, g: 0.0071644704, b: 0.0071644704, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -260,3 +261,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7737370223018954039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305497077362869157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced554fe3c0445c46a26d488d56d4156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flammableObjectData: {fileID: 11400000, guid: 48432ec4a709787449056769a7655003,
+    type: 2}
+  _isOnFire: 0
+  _fireDamage: 0.01
+  _currentHitPoints: 0
+  _maxHitPoints: 0

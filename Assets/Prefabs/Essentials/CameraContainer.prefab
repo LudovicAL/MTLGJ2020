@@ -135,6 +135,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraOffset: {x: 0, y: 0, z: -20}
   smoothTime: 0.5
-  minZoom: 5
-  maxZoom: 20
+  minZoom: 10
+  maxZoom: 40
   zoomLimiter: 40
