@@ -52,6 +52,9 @@ TagManager:
   - name: Furniture
     uniqueID: 2486901253
     locked: 0
+  - name: Grabbable
+    uniqueID: 796441773
+    locked: 0
   - name: Character
     uniqueID: 2639229113
     locked: 0
