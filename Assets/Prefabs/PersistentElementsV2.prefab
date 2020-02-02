@@ -1231,6 +1231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc58477822bc9547bf39abfb4c42f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VictimsToSave: 0
 --- !u!114 &8915946397114200319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1361,5 +1362,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45f17ad3e20f50e4b93f247e490fafa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fire: {fileID: 0}
-  _explosion: {fileID: 0}
+  _fire: {fileID: 1834733583881507474, guid: 987ccd7cd546f7f429972ed3033e874c, type: 3}
+  _explosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
