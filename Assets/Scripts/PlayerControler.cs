@@ -110,9 +110,11 @@ public class PlayerControler : MonoBehaviour {
 	private void Animate() {
 		//Pour animer un personnage, voir https://www.youtube.com/watch?v=yfsqai3ivyA
 		animator.SetFloat("Velocity", rb.velocity.magnitude);
-		animator.SetBool("IsAxing", isAxing);
-		var angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg + 90.0f;
-		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+		animator.SetFloat("Axe", isAxing?1.0f:0.0f);
+		if (rb.velocity.magnitude > 0.0f) {
+			var angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg + 90.0f;
+			transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+		}
 	}
 
 	/// <summary>
