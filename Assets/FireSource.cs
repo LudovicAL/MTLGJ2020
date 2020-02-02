@@ -12,15 +12,15 @@ public class FireSource : MonoBehaviour
     }
     void OnParticleCollision(GameObject collision) {
         if (collision.tag == "Water") {
-            gameObject.GetComponentInParent<Fire>()._hitPoints -= 0.035f;
+            gameObject.GetComponentInParent<Fire>()._hitPoints -= Random.Range(0.035f, 0.1f);
         }
         if (gameObject.GetComponentInParent<Fire>()._hitPoints <= 0.0f){
             Destroy(gameObject);
         } else {
             float extinguishedRatio = gameObject.GetComponentInParent<Fire>()._hitPoints / initialHitPoints;
             transform.parent.gameObject.transform.localScale = new Vector3(
-                initialScale.x * extinguishedRatio,
-                initialScale.y * extinguishedRatio,
+                Mathf.Max(initialScale.x * extinguishedRatio, initialScale.x / 2),
+                Mathf.Max(initialScale.y * extinguishedRatio, initialScale.y / 2),
                 initialScale.z
             );
         }

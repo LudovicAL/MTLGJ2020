@@ -4560,7 +4560,7 @@ PrefabInstance:
     - target: {fileID: 984329133776170787, guid: 03fd947714df5f049b2f4eb82d765254,
         type: 3}
       propertyPath: ShapeModule.angle
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 984329133776170787, guid: 03fd947714df5f049b2f4eb82d765254,
         type: 3}
@@ -4570,7 +4570,7 @@ PrefabInstance:
     - target: {fileID: 984329133776170787, guid: 03fd947714df5f049b2f4eb82d765254,
         type: 3}
       propertyPath: ShapeModule.radius.value
-      value: 0.25
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 984329133776170787, guid: 03fd947714df5f049b2f4eb82d765254,
         type: 3}
