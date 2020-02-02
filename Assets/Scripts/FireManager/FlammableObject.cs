@@ -6,7 +6,7 @@ public class FlammableObject : MonoBehaviour
     public bool _isOnFire;
     public float _fireDamage = 0.01f;
     public float _currentHitPoints;
-    public float _maxHitPoints;
+    public float _maxHitPoints = 0;
 
     void Start()
     {
@@ -30,6 +30,7 @@ public class FlammableObject : MonoBehaviour
             }
             if (gameObject.layer == 13)
                 EventsManager.Instance.houseIntegrityChanges.Invoke();
+            Destroy(gameObject);
         } else if (_currentHitPoints < _maxHitPoints) {
             float burntRatio = Mathf.Max(_currentHitPoints / _maxHitPoints, 0.55f);
             gameObject.GetComponent<SpriteRenderer>().color = new Color(1, burntRatio, burntRatio);
