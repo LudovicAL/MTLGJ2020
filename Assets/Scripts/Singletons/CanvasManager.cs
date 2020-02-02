@@ -53,8 +53,6 @@ public class CanvasManager : MonoBehaviour {
 		}
 		_houseIntegrityHitPoints = wallList.Count;
 		RectTransform rectTransform = _houseIntegritySlider.GetComponent<RectTransform>();
-		Debug.Log(-rectTransform.offsetMax.x);
-		Debug.Log(_houseIntegrityHitPoints);
 		_houstIntegrityIncrement = -rectTransform.offsetMax.x / _houseIntegrityHitPoints;
 	}
 
@@ -84,7 +82,6 @@ public class CanvasManager : MonoBehaviour {
 	{
 		if (_houseIntegritySlider != null) {
 			RectTransform rectTransform = _houseIntegritySlider.GetComponent<RectTransform>();
-			Debug.Log(_houstIntegrityIncrement);
 			rectTransform.offsetMax += new Vector2(_houstIntegrityIncrement, 0);
 		}
 	}
