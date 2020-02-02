@@ -9,6 +9,7 @@ TagManager:
   - Water
   - Wall
   - HouseIntegritySlider
+  - Victim
   layers:
   - Default
   - TransparentFX
