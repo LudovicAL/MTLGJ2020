@@ -1027,7 +1027,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.86, y: 0}
-  m_ConnectedAnchor: {x: -0.639843, y: 0.011789322}
+  m_ConnectedAnchor: {x: -0.63984394, y: 0.011789322}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1051,7 +1051,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.86, y: 0}
-  m_ConnectedAnchor: {x: -0.639843, y: 0.011789322}
+  m_ConnectedAnchor: {x: -0.63984394, y: 0.011789322}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1075,7 +1075,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.86, y: 0}
-  m_ConnectedAnchor: {x: -0.639843, y: 0.011789322}
+  m_ConnectedAnchor: {x: -0.63984394, y: 0.011789322}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1099,7 +1099,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.86, y: 0}
-  m_ConnectedAnchor: {x: -0.639843, y: 0.011789322}
+  m_ConnectedAnchor: {x: -0.63984394, y: 0.011789322}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -4493,7 +4493,7 @@ PrefabInstance:
     - target: {fileID: 984329133776170787, guid: 03fd947714df5f049b2f4eb82d765254,
         type: 3}
       propertyPath: CollisionModule.collidesWith.m_Bits
-      value: 45073
+      value: 503825
       objectReference: {fileID: 0}
     - target: {fileID: 984329133776170787, guid: 03fd947714df5f049b2f4eb82d765254,
         type: 3}
@@ -4563,6 +4563,16 @@ PrefabInstance:
     - target: {fileID: 984329133776170787, guid: 03fd947714df5f049b2f4eb82d765254,
         type: 3}
       propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 984329133776170787, guid: 03fd947714df5f049b2f4eb82d765254,
+        type: 3}
+      propertyPath: CollisionModule.colliderForce
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 984329133776170787, guid: 03fd947714df5f049b2f4eb82d765254,
+        type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSpeed
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 984336663822511935, guid: 03fd947714df5f049b2f4eb82d765254,

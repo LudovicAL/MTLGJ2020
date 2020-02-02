@@ -115,7 +115,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 3
   m_LinearDrag: 2
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.6
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   attachOffset: {x: 0, y: -1.5}
   MaxTank: 100
   DrainPerSecond: 15
-  Stream: {fileID: 8505215494967770909}
+  Stream: {fileID: 8505134381998740957}
   CurrentTank: 0
 --- !u!1001 &1887210783326420069
 PrefabInstance:
@@ -149,6 +149,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6716102904413379557}
     m_Modifications:
+    - target: {fileID: 7796254118552226324, guid: c40781b840507c342b5c1a3874a0f0e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7796524916481108642, guid: c40781b840507c342b5c1a3874a0f0e7,
         type: 3}
       propertyPath: m_Name
@@ -157,7 +162,7 @@ PrefabInstance:
     - target: {fileID: 7798018332149842808, guid: c40781b840507c342b5c1a3874a0f0e7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.6421
+      value: 2.39
       objectReference: {fileID: 0}
     - target: {fileID: 7798018332149842808, guid: c40781b840507c342b5c1a3874a0f0e7,
         type: 3}
@@ -227,12 +232,12 @@ PrefabInstance:
     - target: {fileID: 7798253912746240440, guid: c40781b840507c342b5c1a3874a0f0e7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7798253912746240440, guid: c40781b840507c342b5c1a3874a0f0e7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.51
+      value: -0.195
       objectReference: {fileID: 0}
     - target: {fileID: 7798253912746240440, guid: c40781b840507c342b5c1a3874a0f0e7,
         type: 3}
@@ -434,11 +439,47 @@ PrefabInstance:
       propertyPath: VelocityModule.enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7995385042388602740, guid: c40781b840507c342b5c1a3874a0f0e7,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995385042388602740, guid: c40781b840507c342b5c1a3874a0f0e7,
+        type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995385042388602740, guid: c40781b840507c342b5c1a3874a0f0e7,
+        type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995385042388602740, guid: c40781b840507c342b5c1a3874a0f0e7,
+        type: 3}
+      propertyPath: CollisionModule.colliderForce
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995385042388602740, guid: c40781b840507c342b5c1a3874a0f0e7,
+        type: 3}
+      propertyPath: CollisionModule.collisionMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995385042388602740, guid: c40781b840507c342b5c1a3874a0f0e7,
+        type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 471041
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c40781b840507c342b5c1a3874a0f0e7, type: 3}
 --- !u!4 &8505215494967770909 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7798018332149842808, guid: c40781b840507c342b5c1a3874a0f0e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1887210783326420069}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8505134381998740957 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7798253912746240440, guid: c40781b840507c342b5c1a3874a0f0e7,
     type: 3}
   m_PrefabInstance: {fileID: 1887210783326420069}
   m_PrefabAsset: {fileID: 0}

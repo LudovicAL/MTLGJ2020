@@ -131,7 +131,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 3
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -154,7 +154,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.058003902, y: -0.13534188}
-  m_ConnectedAnchor: {x: 0.4750601, y: 0.6640477}
+  m_ConnectedAnchor: {x: 0.4750601, y: 0.66404754}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65ac1b0ee5c4b648a8a594363632265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   dropDistance: 2
   owner: {fileID: 0}
   attachOffset: {x: 0, y: 0}
@@ -313,7 +313,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 3
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65ac1b0ee5c4b648a8a594363632265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   dropDistance: 2
   owner: {fileID: 0}
   attachOffset: {x: 0, y: 0}
@@ -492,7 +492,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 3
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -515,7 +515,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.11600757}
-  m_ConnectedAnchor: {x: -0.5399423, y: -0.8086008}
+  m_ConnectedAnchor: {x: -0.5399427, y: -0.8086006}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -673,7 +673,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 3
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -696,7 +696,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.07733822, y: 0.06767106}
-  m_ConnectedAnchor: {x: -0.13777046, y: -0.22124538}
+  m_ConnectedAnchor: {x: -0.1377708, y: -0.22124545}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -717,7 +717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65ac1b0ee5c4b648a8a594363632265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   dropDistance: 2
   owner: {fileID: 0}
   attachOffset: {x: 0, y: 0}
@@ -733,7 +733,8 @@ GameObject:
   - component: {fileID: 2442551434839502017}
   - component: {fileID: 2442551434839502044}
   - component: {fileID: 2442551434839502019}
-  m_Layer: 17
+  - component: {fileID: 654778983295040619}
+  m_Layer: 12
   m_Name: c3-body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -875,7 +876,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 3
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -883,6 +884,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &654778983295040619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442551434839502016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65ac1b0ee5c4b648a8a594363632265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  dropDistance: 2
+  owner: {fileID: 0}
+  attachOffset: {x: 0, y: 0}
 --- !u!1 &2442551435146362815
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +913,8 @@ GameObject:
   - component: {fileID: 2442551435146362811}
   - component: {fileID: 2442551435146362810}
   - component: {fileID: 2442551435146362804}
-  m_Layer: 17
+  - component: {fileID: 4623749731251737841}
+  m_Layer: 12
   m_Name: C3-Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -980,7 +998,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 3
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -1048,7 +1066,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.02131176, y: 0.14917994}
-  m_ConnectedAnchor: {x: -0.05963184, y: -0.3934311}
+  m_ConnectedAnchor: {x: -0.059632868, y: -0.3934311}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1057,6 +1075,22 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -12.280356
     m_UpperAngle: 12.719322
+--- !u!114 &4623749731251737841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442551435146362815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65ac1b0ee5c4b648a8a594363632265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  dropDistance: 2
+  owner: {fileID: 0}
+  attachOffset: {x: 0, y: 0}
 --- !u!1 &2442551435222648211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,7 +1225,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 3
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -1235,7 +1269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65ac1b0ee5c4b648a8a594363632265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   dropDistance: 2
   owner: {fileID: 0}
   attachOffset: {x: 0, y: 0}
@@ -1371,7 +1405,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 3
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -1394,7 +1428,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.10633993, y: 0.18367887}
-  m_ConnectedAnchor: {x: 0.41535243, y: -0.6311944}
+  m_ConnectedAnchor: {x: 0.41535208, y: -0.6311944}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1415,7 +1449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65ac1b0ee5c4b648a8a594363632265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   dropDistance: 2
   owner: {fileID: 0}
   attachOffset: {x: 0, y: 0}
@@ -1428,7 +1462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3454132328064549234}
-  m_Layer: 17
+  m_Layer: 12
   m_Name: Corpse3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
