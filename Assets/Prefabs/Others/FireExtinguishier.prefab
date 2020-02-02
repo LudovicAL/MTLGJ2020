@@ -159,6 +159,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireExtinguisher
       objectReference: {fileID: 0}
+    - target: {fileID: 7796524916481108642, guid: c40781b840507c342b5c1a3874a0f0e7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 7798018332149842808, guid: c40781b840507c342b5c1a3874a0f0e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -354,6 +359,31 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7964687027344762484, guid: c40781b840507c342b5c1a3874a0f0e7,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964687027344762484, guid: c40781b840507c342b5c1a3874a0f0e7,
+        type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964687027344762484, guid: c40781b840507c342b5c1a3874a0f0e7,
+        type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 523575
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964687027344762484, guid: c40781b840507c342b5c1a3874a0f0e7,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964687027344762484, guid: c40781b840507c342b5c1a3874a0f0e7,
+        type: 3}
+      propertyPath: CollisionModule.collisionMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7995385042388602740, guid: c40781b840507c342b5c1a3874a0f0e7,
         type: 3}
       propertyPath: moveWithTransform
@@ -467,7 +497,7 @@ PrefabInstance:
     - target: {fileID: 7995385042388602740, guid: c40781b840507c342b5c1a3874a0f0e7,
         type: 3}
       propertyPath: CollisionModule.collidesWith.m_Bits
-      value: 471041
+      value: 520193
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c40781b840507c342b5c1a3874a0f0e7, type: 3}
