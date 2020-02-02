@@ -9,7 +9,7 @@ public class Grabbable : MonoBehaviour
     public float dropDistance = 1f;
     [HideInInspector]
     public PlayerControler owner;
-    private Rigidbody2D rigidBody;
+    protected Rigidbody2D rigidBody;
 
     // Start is called before the first frame update
     public virtual void Start()
