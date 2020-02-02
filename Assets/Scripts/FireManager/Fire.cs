@@ -2,6 +2,16 @@
 
 public class Fire : MonoBehaviour
 {
+    public float _hitPoints = 10.0f;
+    public float _hitPointsVariation = 10.0f;
+
+    void awake() {
+        this._hitPoints = Random.Range(
+            _hitPoints - _hitPointsVariation,
+            -_hitPoints + _hitPointsVariation
+        );
+    }
+
     void OnBecameInvisible(){
         GetComponent<ParticleSystem>().Stop();
     }
@@ -37,6 +47,16 @@ public class Fire : MonoBehaviour
         if (collider.tag == "Flammable") {
             FlammableObject flammableObject = collider.GetComponent<FlammableObject>();
             flammableObject._isOnFire = false;
+        }
+    }
+
+    void OnParticleCollision(GameObject collision) {
+        Debug.Log(collision);
+        if (collision.tag == "FireStarter") {
+            this._hitPoints -= 10.0f;
+        }
+        if (this._hitPoints <= 0.0f){
+            Destroy(gameObject);
         }
     }
 }

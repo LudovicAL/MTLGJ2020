@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Shootable
   - Flammable
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Grabbable
   - Wall
   - FireStarter
-  - 
+  - FireSource
   - 
   - 
   - 
