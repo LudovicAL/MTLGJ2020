@@ -5,12 +5,12 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
     public float _fireDamage = 10.0f;
-    void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Flammable") {
-            FlammableObject flammableObject = collision.gameObject.GetComponent<FlammableObject>();
+    void OnTriggerEnter2D(Collider2D collider) {
+        if (collider.gameObject.tag == "Flammable") {
+            FlammableObject flammableObject = collider.gameObject.GetComponent<FlammableObject>();
             
             Vector3 source = gameObject.transform.position;
-            Vector3 destination = collision.transform.position;
+            Vector3 destination = collider.transform.position;
             Vector3 direction = destination - source;
 
             RaycastHit2D hit = Physics2D.Raycast(source, direction);
@@ -18,10 +18,9 @@ public class Explosion : MonoBehaviour
                 FlammableObject hitFlammableObject = hit.transform.gameObject.GetComponent<FlammableObject>();
                 if (hitFlammableObject != null)
                 {
-                    if (hit.transform == collision.transform || !hitFlammableObject._flammableObjectData.isBlockingPropagation)
+                    if (hit.transform == collider.transform || !hitFlammableObject._flammableObjectData.isBlockingPropagation)
                     {
-                        flammableObject._fireDamage = _fireDamage;
-                        flammableObject._isOnFire = true;
+                        flammableObject._currentHitPoints -= _fireDamage;
                     }
                 }
 

@@ -30,7 +30,7 @@ public class FireManager : MonoBehaviour
     {
         var shape = _fire.GetComponent<ParticleSystem>().shape;
         shape.scale = new Vector3(radius, radius, 1.0f);
-        Instantiate(_fire, source.transform.position, Quaternion.identity);
+        Instantiate(_fire, source.transform.position, Quaternion.Euler(new Vector3(0, 180, 0)));
     }
     
     public void SpawnExplosion(GameObject source, float explosionRadius)
