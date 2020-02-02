@@ -2,7 +2,7 @@
 Un jeu de Game Jam avec une maison en feu.
 
 RAF:<br>
-  Un indicateur montre l'intégrité restante de la maison (ex: 50%)<br>
+  <s>Un indicateur montre l'intégrité restante de la maison (ex: 50%)</s><br>
   Les flammes blessent les pompiers<br>
   Le jeu prend fin lorsque toutes les victimes sont sauvées ou mortes (Aurelie)<br>
   Le jeu prend fin lorsque la maison s'écroule / n'a plus suffisamment d'intégrité<br>
