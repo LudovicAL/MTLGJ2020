@@ -7,7 +7,6 @@ using UnityEngine;
 public class PlayerControler : MonoBehaviour {
 
 	public GameObject crosshair;
-	public GameObject corps;
 	public Animator animator;
 	public float crosshairDistance;
 	public float arrowSpeed;
@@ -112,7 +111,7 @@ public class PlayerControler : MonoBehaviour {
 		//Pour animer un personnage, voir https://www.youtube.com/watch?v=yfsqai3ivyA
 		animator.SetFloat("Velocity", rb.velocity.magnitude);
 		var angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg + 90.0f;
-		corps.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 	}
 
 	/// <summary>
