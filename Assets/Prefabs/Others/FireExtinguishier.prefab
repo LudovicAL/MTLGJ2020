@@ -134,12 +134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6978f6ca556540b45a042e24b239b114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
   dropDistance: 1
   owner: {fileID: 0}
   attachOffset: {x: 0, y: -1.5}
   MaxTank: 100
-  DrainPerSecond: 15
+  DrainPerSecond: 10
   Stream: {fileID: 8505134381998740957}
   CurrentTank: 0
 --- !u!1001 &1887210783326420069
