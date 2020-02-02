@@ -32,7 +32,7 @@ public class FlammableObject : MonoBehaviour
             }
             Destroy(gameObject);
         } else if (_currentHitPoints < _maxHitPoints) {
-            float burntRatio = _currentHitPoints / _maxHitPoints;
+            float burntRatio = Mathf.Max(_currentHitPoints / _maxHitPoints, 0.35f);
             gameObject.GetComponent<SpriteRenderer>().color = new Color(1, burntRatio, burntRatio);
         }
     }

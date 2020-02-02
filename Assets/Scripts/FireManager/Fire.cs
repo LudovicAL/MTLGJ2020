@@ -2,6 +2,14 @@
 
 public class Fire : MonoBehaviour
 {
+    void OnBecameInvisible(){
+        GetComponent<ParticleSystem>().Stop();
+    }
+
+    void OnBecameVisible(){
+        GetComponent<ParticleSystem>().Play();
+    }
+
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.tag == "Flammable") {
             FlammableObject flammableObject = collider.GetComponent<FlammableObject>();
@@ -15,10 +23,8 @@ public class Fire : MonoBehaviour
                 FlammableObject hitFlammableObject = hit.transform.gameObject.GetComponent<FlammableObject>();
                 if (hitFlammableObject != null)
                 {
-                    Debug.Log("Test");
                     if (hit.transform == collider.transform || !hitFlammableObject._flammableObjectData.isBlockingPropagation)
                     {
-                        Debug.Log("OnFire");
                         flammableObject._isOnFire = true;
                     }
                 }

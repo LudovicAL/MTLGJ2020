@@ -78,7 +78,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fire: {fileID: 1834733583881507474, guid: 987ccd7cd546f7f429972ed3033e874c, type: 3}
-  _explosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
+  _explosion: {fileID: 4698822118466977917, guid: 0837d587608804b4c843674960f10196,
+    type: 3}
 --- !u!1001 &3363302498657801040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -165,6 +166,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953741697644762584, guid: 0eab9e1c7e7d7604e8b288aa74fca89d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3953741697644762588, guid: 0eab9e1c7e7d7604e8b288aa74fca89d,
         type: 3}
@@ -286,6 +292,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3363302499907328537}
     m_Modifications:
+    - target: {fileID: 3144882331823281074, guid: 8d4d1c9d49862384f9bce0d12d400d01,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15
+      objectReference: {fileID: 0}
     - target: {fileID: 3144882332818279472, guid: 8d4d1c9d49862384f9bce0d12d400d01,
         type: 3}
       propertyPath: m_LocalPosition.x
