@@ -20,26 +20,31 @@ public class Grabbable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (owner == null)
-        {
-            rigidBody.velocity = Vector2.zero;
-            return;
-        }
+		UpdateInternal();
+	}
 
-        Vector2 direction = ((Vector2)owner.transform.position - rigidBody.position);
-        if (direction.sqrMagnitude > dropDistance * dropDistance)
-        {
 
-            owner.DropGrabbedObject(false);
-            Drop(false);
-            return;
-        }
+	public virtual void UpdateInternal() {
+		if (owner == null) {
+			rigidBody.velocity = Vector2.zero;
+			return;
+		}
 
-        direction = direction.normalized;
-        rigidBody.velocity = direction * speed;
-    }
+		Vector2 direction = ((Vector2)owner.transform.position - rigidBody.position);
+		if (direction.sqrMagnitude > dropDistance * dropDistance) {
 
-    public virtual void Pickup(PlayerControler pickupPlayer)
+			owner.DropGrabbedObject(false);
+			Drop(false);
+			return;
+		}
+
+		direction = direction.normalized;
+		rigidBody.velocity = direction * speed;
+	}
+
+		
+
+	public virtual void Pickup(PlayerControler pickupPlayer)
     {
         owner = pickupPlayer;
     }
