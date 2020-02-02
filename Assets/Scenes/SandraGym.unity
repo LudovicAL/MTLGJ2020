@@ -439,44 +439,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_ConnectedAnchor.x
-      value: -0.63984394
-      objectReference: {fileID: 0}
-    - target: {fileID: 3703775747625884, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 20.252419
-      objectReference: {fileID: 0}
-    - target: {fileID: 1530863960804126878, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.38408756
-      objectReference: {fileID: 0}
-    - target: {fileID: 2207213330340241623, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 19.220592
-      objectReference: {fileID: 0}
-    - target: {fileID: 2308613188670619115, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 18.188766
-      objectReference: {fileID: 0}
-    - target: {fileID: 3105031982493983091, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.15694
-      objectReference: {fileID: 0}
-    - target: {fileID: 5339549251233943940, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.6477375
-      objectReference: {fileID: 0}
-    - target: {fileID: 6113083659373925919, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 16.125114
-      objectReference: {fileID: 0}
     - target: {fileID: 6769554165776689208, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -532,45 +494,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6769554165776689208, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6769554165776689208, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6769554165776690118, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc,
         type: 3}
       propertyPath: m_Name
       value: Firehose
       objectReference: {fileID: 0}
-    - target: {fileID: 6769554166647961452, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.8999996
-      objectReference: {fileID: 0}
-    - target: {fileID: 6939561803704521541, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 21.284245
-      objectReference: {fileID: 0}
-    - target: {fileID: 8160985418112014910, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.6795626
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc, type: 3}
---- !u!50 &1274578200 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 6769554165279276971, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1274578199}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1386490347 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3953741697489431745, guid: 0eab9e1c7e7d7604e8b288aa74fca89d,
@@ -583,108 +513,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 46190321}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1934335497 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2103086935775578444, guid: 91b26a8c6ec0a8b40b68eb306df5e0cc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1274578199}
-  m_PrefabAsset: {fileID: 0}
---- !u!233 &1934335498
-HingeJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934335497}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 1274578200}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0.86, y: 0}
-  m_ConnectedAnchor: {x: -0.63984394, y: 0.011789322}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
---- !u!233 &1934335505
-HingeJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934335497}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 1274578200}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0.86, y: 0}
-  m_ConnectedAnchor: {x: -0.63984394, y: 0.011789322}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
---- !u!233 &1934335506
-HingeJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934335497}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 1274578200}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0.86, y: 0}
-  m_ConnectedAnchor: {x: -0.63984394, y: 0.011789322}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
---- !u!233 &1934335507
-HingeJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934335497}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 1274578200}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0.86, y: 0}
-  m_ConnectedAnchor: {x: -0.63984394, y: 0.011789322}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
 --- !u!1 &2095842262 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3953741698087411210, guid: 0eab9e1c7e7d7604e8b288aa74fca89d,
