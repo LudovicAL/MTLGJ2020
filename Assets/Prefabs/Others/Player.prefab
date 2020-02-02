@@ -153,7 +153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshair: {fileID: 2651731621801256742}
-  corps: {fileID: 2670996757837719825}
   animator: {fileID: 557249208}
   crosshairDistance: 2
   arrowSpeed: 0
@@ -169,6 +168,7 @@ MonoBehaviour:
   footStepWoodAudioClip: {fileID: 8300000, guid: f8c2d4109f34f8d418e51d5a1efd6833,
     type: 3}
   bowAudioClip: {fileID: 0}
+  isAxing: 0
 --- !u!114 &-6157545252899425522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,6 +559,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2213107809859365810}
   - component: {fileID: 3376243526851220127}
+  - component: {fileID: 7542107159377566279}
+  - component: {fileID: 8512957409016617711}
   m_Layer: 0
   m_Name: Hache
   m_TagString: Untagged
@@ -631,3 +633,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &7542107159377566279
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8385790891388000493}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.17575622, y: -2.0370004}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.62554014, y: 0.9385316}
+    oldSize: {x: 1.4, y: 3.69}
+    newSize: {x: 1.4, y: 3.69}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1394634, y: 2.8523622}
+  m_EdgeRadius: 0
+--- !u!114 &8512957409016617711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8385790891388000493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67cab128ca0fca347bbf3ff6552e1544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axeDamage: 10
