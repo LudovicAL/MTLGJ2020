@@ -121,6 +121,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1484789685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3268337372635812106, guid: 0f3f2c6c9b209e342bb9b70172a30880,
+    type: 3}
+  m_PrefabInstance: {fileID: 4620221822103337938}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1484789692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484789685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e207f9824cbc5540a17a791d6e98d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableHouses:
+  - {fileID: 7080401398883378160, guid: d2bc1bd9b3df1cd429759d21284a7b11, type: 3}
+  - {fileID: 7982073368811789500, guid: 89b695cd9499a1f4f9cdd521e08a97cc, type: 3}
+  - {fileID: 5364133012143200421, guid: 86960196608922d4a875d5fdcacc7d1e, type: 3}
 --- !u!1001 &4620221822103337938
 PrefabInstance:
   m_ObjectHideFlags: 0
