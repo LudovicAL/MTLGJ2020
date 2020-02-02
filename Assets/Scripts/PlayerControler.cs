@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerControler : MonoBehaviour {
 
 	public GameObject crosshair;
+	public Animator animator;
 	public float crosshairDistance;
 	public float arrowSpeed;
 	public float movementSpeedMultiplicator;
@@ -52,9 +53,9 @@ public class PlayerControler : MonoBehaviour {
 			ProcessInputs();
 			Move();
 			PlayFootsteps();
+			Animate();
 			Aim();
 			ShootArrow();
-			InterractWithDoor();
 			TryGrab();
 		}
 	}
@@ -104,6 +105,15 @@ public class PlayerControler : MonoBehaviour {
 	}
 
 	/// <summary>
+	/// Animates the character
+	/// </summary>
+	private void Animate() {
+		//Pour animer un personnage, voir https://www.youtube.com/watch?v=yfsqai3ivyA
+		animator.SetFloat("Horizontal", movementDirection.x);
+		animator.SetFloat("Vertical", movementDirection.y);
+	}
+
+	/// <summary>
 	/// Finds out the right footsteps audioclip to play
 	/// </summary>
 	private void SetFootstepsAudioClip() {
@@ -131,17 +141,6 @@ public class PlayerControler : MonoBehaviour {
 		if (endOfAiming) {
 			//AudioManager.Instance.PlayClipOneShot(bowAudioClip);
 			//GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
-		}
-	}
-
-	/// <summary>
-	/// Interracts with every colliding doors
-	/// </summary>
-	private void InterractWithDoor() {
-		if (isInterractingWithDoors) {
-			//for (int i = (playerCollisionsManager.currentCollidingDoors.Count - 1); i >= 0; i--) {
-			//	playerCollisionsManager.currentCollidingDoors[i].Interract();
-			//}
 		}
 	}
 
