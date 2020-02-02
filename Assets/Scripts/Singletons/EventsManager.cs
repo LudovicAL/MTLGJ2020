@@ -30,6 +30,10 @@ public class PlayerLeavesGame : UnityEvent<PlayerId> {
 public class GameStateChanges : UnityEvent {
 }
 
+public class HouseIntegrityChanges : UnityEvent {
+
+}
+
 public class EventsManager : MonoBehaviour {
 
 	public PlayerCollidesWithDoor playerCollidesWithDoor;
@@ -37,6 +41,7 @@ public class EventsManager : MonoBehaviour {
 	public PlayerJoinsGame playerJoinsGame;
 	public PlayerLeavesGame playerLeavesGame;
 	public GameStateChanges gameStateChanges;
+	public HouseIntegrityChanges houseIntegrityChanges;
 
 	public static EventsManager Instance {get; private set;}
 
@@ -64,6 +69,9 @@ public class EventsManager : MonoBehaviour {
 		}
 		if (gameStateChanges == null) {
 			gameStateChanges = new GameStateChanges();
+		}
+		if (houseIntegrityChanges == null) {
+			houseIntegrityChanges = new HouseIntegrityChanges();
 		}
 	}
 }

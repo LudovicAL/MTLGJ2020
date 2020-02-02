@@ -13,6 +13,8 @@ public class CanvasManager : MonoBehaviour {
 	public Text countDownText;
 	public static CanvasManager Instance { get; private set; }
 
+	private GameObject _houseIntegritySlider;
+
 	private void Awake() {
 		if (Instance == null) {
 			Instance = this;
@@ -24,13 +26,36 @@ public class CanvasManager : MonoBehaviour {
 
 	// Start is called before the first frame update
 	void Start() {
+
 		EventsManager.Instance.gameStateChanges.AddListener(OnGameStateChanges);
+		EventsManager.Instance.houseIntegrityChanges.AddListener(HouseIntegrityChanges);
+		SetHouseIntegrity();
 		OnGameStateChanges();
 	}
 
 	// Update is called once per frame
 	void Update() {
 
+	}
+
+	private int _houseIntegrityHitPoints;
+	private float _houstIntegrityIncrement;
+	private void SetHouseIntegrity() {
+		_houseIntegritySlider = GameObject.FindGameObjectWithTag("HouseIntegritySlider");
+		var goArray = FindObjectsOfType(typeof(GameObject)) as GameObject[];
+		var wallList = new System.Collections.Generic.List<GameObject>();
+		for (int i = 0; i < goArray.Length; i++)
+		{
+			if (goArray[i].layer == 13)
+			{
+				wallList.Add(goArray[i]);
+			}
+		}
+		_houseIntegrityHitPoints = wallList.Count;
+		RectTransform rectTransform = _houseIntegritySlider.GetComponent<RectTransform>();
+		Debug.Log(-rectTransform.offsetMax.x);
+		Debug.Log(_houseIntegrityHitPoints);
+		_houstIntegrityIncrement = -rectTransform.offsetMax.x / _houseIntegrityHitPoints;
 	}
 
 	//Called when the GameState changes
@@ -52,6 +77,15 @@ public class CanvasManager : MonoBehaviour {
 			case (GameStatesManager.AvailableGameStates.Ending):
 				ShowPanel("Panel Ending");
 				break;
+		}
+	}
+
+	private void HouseIntegrityChanges()
+	{
+		if (_houseIntegritySlider != null) {
+			RectTransform rectTransform = _houseIntegritySlider.GetComponent<RectTransform>();
+			Debug.Log(_houstIntegrityIncrement);
+			rectTransform.offsetMax += new Vector2(_houstIntegrityIncrement, 0);
 		}
 	}
 

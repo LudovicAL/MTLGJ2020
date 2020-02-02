@@ -28,6 +28,7 @@ public class FlammableObject : MonoBehaviour
             } else if (_isOnFire) {
                 FireManager.Instance.SpawnFire(gameObject, _flammableObjectData.fireRadius);
             }
+            EventsManager.Instance.houseIntegrityChanges.Invoke();
             Destroy(gameObject);
         } else if (_currentHitPoints < _maxHitPoints) {
             float burntRatio = Mathf.Max(_currentHitPoints / _maxHitPoints, 0.55f);
