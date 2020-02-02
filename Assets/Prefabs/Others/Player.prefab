@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2651731621801256736}
   - component: {fileID: 2651731621801256743}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: -6157545252899425522}
   - component: {fileID: 4166512559752629666}
   - component: {fileID: 557249208}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6780425785621077719}
   - component: {fileID: 5089877861226197654}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Corps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4969092619061004561}
   - component: {fileID: 8316281932247249532}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Tete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7848758829802514051}
   - component: {fileID: 5074615257018782763}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Pied2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -477,7 +477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3804325321185142439}
   - component: {fileID: 1208707888183640898}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Pied1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 3376243526851220127}
   - component: {fileID: 7542107159377566279}
   - component: {fileID: 8512957409016617711}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Hache
   m_TagString: Untagged
   m_Icon: {fileID: 0}

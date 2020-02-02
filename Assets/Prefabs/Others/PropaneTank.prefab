@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3373455131256684703}
   - component: {fileID: 3373455131256684702}
   - component: {fileID: 3373455131256684701}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PropaneTank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -134,13 +134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ced554fe3c0445c46a26d488d56d4156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fireManager: {fileID: 0}
   _flammableObjectData: {fileID: 11400000, guid: 782548d271498744b8fa850d5a72033c,
     type: 2}
   _isOnFire: 0
   _fireDamage: 0.01
   _currentHitPoints: 0
-  _maxHitPoints: 0
+  _maxHitPoints: 100
 --- !u!114 &3373455131256684701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,5 +153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  dropDistance: 1
+  dropDistance: 2
   owner: {fileID: 0}
+  attachOffset: {x: 0, y: -1.5}

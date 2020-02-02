@@ -3373,8 +3373,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  dropDistance: 2
+  dropDistance: 3
   owner: {fileID: 0}
+  attachOffset: {x: -0.5, y: -1.5}
   stream: {fileID: 5393380435833500386}
 --- !u!61 &2118286510837622970
 BoxCollider2D:
