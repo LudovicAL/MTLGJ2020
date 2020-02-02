@@ -51,9 +51,7 @@ public class CanvasManager : MonoBehaviour {
 			}
 		}
 		_houseIntegrityHitPoints = wallList.Count;
-		Debug.Log(_houseIntegrityHitPoints);
 		_houstIntegrityIncrement = 1.0f / _houseIntegrityHitPoints;
-		Debug.Log(_houstIntegrityIncrement);
 	}
 
 	//Called when the GameState changes
