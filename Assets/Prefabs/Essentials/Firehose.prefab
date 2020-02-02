@@ -1884,9 +1884,9 @@ GameObject:
   - component: {fileID: 6769554165279276970}
   - component: {fileID: 6769554165279276971}
   - component: {fileID: 6769554165279276973}
-  - component: {fileID: 6104168972030574013}
   - component: {fileID: 3716878465859805957}
   - component: {fileID: 8236532834965226562}
+  - component: {fileID: 4948253111025381891}
   m_Layer: 12
   m_Name: tempB-hose
   m_TagString: Untagged
@@ -1980,21 +1980,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6104168972030574013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6769554165279276968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d65ac1b0ee5c4b648a8a594363632265, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  dropDistance: 2
-  owner: {fileID: 0}
 --- !u!60 &3716878465859805957
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2041,6 +2026,22 @@ ConstantForce2D:
   m_Force: {x: 0, y: 0}
   m_RelativeForce: {x: -700, y: 0}
   m_Torque: 0
+--- !u!114 &4948253111025381891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6769554165279276968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1ab3cf7ba755141b23d29507477598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  dropDistance: 2
+  owner: {fileID: 0}
+  stream: {fileID: 5393380435833500386}
 --- !u!1 &6769554165776690118
 GameObject:
   m_ObjectHideFlags: 0

@@ -128,6 +128,8 @@ public class PlayerControler : MonoBehaviour {
 	private void Aim() {
 		if (crosshair.activeSelf != isAiming) {
 			crosshair.SetActive(isAiming);
+			if (grabbedObject)
+				grabbedObject.Aim(isAiming);
 		}
 		if (movementDirection != Vector2.zero) {
 			crosshair.transform.localPosition = movementDirection * crosshairDistance;
@@ -152,7 +154,7 @@ public class PlayerControler : MonoBehaviour {
 			// pickup
 			if (grabbedObject == null)
 			{
-				Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 1f, 1 << 12); // 12 = Grabbable
+				Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 1.5f, 1 << 12); // 12 = Grabbable
 				foreach (Collider2D hit in hits)
 				{
 					Grabbable grabComponent = hit.gameObject.GetComponent<Grabbable>();
@@ -166,14 +168,14 @@ public class PlayerControler : MonoBehaviour {
 			}
 			else // drop
 			{
-				DropGrabbedObject();
+				DropGrabbedObject(true);
 			}
 		}
 	}
 
-	public void DropGrabbedObject()
+	public void DropGrabbedObject(bool intentional)
 	{
-		grabbedObject.Drop();
+		grabbedObject.Drop(intentional);
 		grabbedObject = null;
 	}
 
