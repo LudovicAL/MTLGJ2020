@@ -2,21 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AxeCollisionsManager : MonoBehaviour {
-
+public class AxeCollisionsManager : MonoBehaviour 
+{
 	public float axeDamage;
-
-	void Start() {
-        
-    }
-
-    void Update() {
-        
-    }
-
-	void OnTriggerEnter2D(Collider2D col) {
-		if (col.CompareTag("Wall")) {
-			col.gameObject.GetComponent<FlammableObject>()._currentHitPoints -= axeDamage;
-		}
+	void OnTriggerEnter2D(Collider2D collider) {
+		FlammableObject flammableObject = collider.gameObject.GetComponent<FlammableObject>();
+		if (flammableObject != null && flammableObject._flammableObjectData.isBreakable)
+			flammableObject._currentHitPoints -= axeDamage;
 	}
 }

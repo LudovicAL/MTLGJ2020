@@ -29,7 +29,7 @@ public class PlayerControler : MonoBehaviour {
 	private Vector2 movementDirection;
 	private Vector2 aimDirection = Vector2.down;
 	private float movementSpeed;
-	private bool isAiming;
+	private bool isActionButtonPressed;
 	private bool endOfAiming;
 	private bool isGrabbing;
 	private bool audioSourceIsPaused;
@@ -67,11 +67,11 @@ public class PlayerControler : MonoBehaviour {
 		movementDirection = new Vector2(player.playerId.controls.GetLHorizontal(), player.playerId.controls.GetLVertical());
 		movementSpeed = Mathf.Clamp(movementDirection.magnitude, 0.0f, 1.0f);
 		movementDirection.Normalize();
-		isAiming = player.playerId.controls.GetButtonA();
+		isActionButtonPressed = player.playerId.controls.GetButtonA();
 		endOfAiming = player.playerId.controls.GetButtonAUp();
 		isGrabbing = player.playerId.controls.GetButtonXDown();
 
-		if (isAiming) {
+		if (isActionButtonPressed) {
 			movementSpeed *= aimingPenaltyToMovementSpeed;
 		}
 	}
@@ -90,7 +90,7 @@ public class PlayerControler : MonoBehaviour {
 	private void PlayFootsteps() {
 		if (rb.velocity != Vector2.zero) {	//If the character is moving
 			if (!audioSource || !audioSource.isPlaying) { //If footsteps sounds are not playing already
-				if (isAiming) {
+				if (isActionButtonPressed) {
 					audioSource = AudioManager.Instance.PlayClip(currentFootStepAudioClip, false, 0.0f, Random.Range(minFootstepsVolume * aimingPenaltyToMovementSpeed, maxFootstepsVolume * aimingPenaltyToMovementSpeed), Random.Range(minFootstepsPitch * aimingPenaltyToMovementSpeed, maxFootstepsPitch * aimingPenaltyToMovementSpeed));
 				} else {
 					audioSource = AudioManager.Instance.PlayClip(currentFootStepAudioClip, false, 0.0f, Random.Range(minFootstepsVolume, maxFootstepsVolume), Random.Range(minFootstepsPitch, maxFootstepsPitch));
@@ -110,6 +110,8 @@ public class PlayerControler : MonoBehaviour {
 		//Pour animer un personnage, voir https://www.youtube.com/watch?v=yfsqai3ivyA
 		animator.SetFloat("Velocity", rb.velocity.magnitude);
 		animator.SetFloat("Axe", isAxing?1.0f:0.0f);
+		animator.SetFloat("ActionButtonPressed", isActionButtonPressed?1.0f:0.0f);
+		
 		if (rb.velocity.magnitude > 0.0f) {
 			var angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg + 90.0f;
 			transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
@@ -127,10 +129,10 @@ public class PlayerControler : MonoBehaviour {
 	/// Aims the bow
 	/// </summary>
 	private void Aim() {
-		if (crosshair.activeSelf != isAiming) {
-			crosshair.SetActive(isAiming);
+		if (crosshair.activeSelf != isActionButtonPressed) {
+			crosshair.SetActive(isActionButtonPressed);
 			if (grabbedObject)
-				grabbedObject.Aim(isAiming);
+				grabbedObject.Aim(isActionButtonPressed);
 		}
 		if (movementDirection != Vector2.zero) {
 			crosshair.transform.localPosition = movementDirection * crosshairDistance;

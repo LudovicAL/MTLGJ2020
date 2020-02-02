@@ -8,6 +8,7 @@ public class FlammableObjectData : ScriptableObject
     public float hitPointsVariation;
     public float regeneration;
     public float explosionRadius;
+    public bool isBreakable;
     public bool isExplodingOnDeath;
     public bool isBlockingPropagation;
     public float damageOnDeath;
@@ -24,6 +25,7 @@ public class FlammableObjectDataEditor: Editor
         flammableObjectData.hitPointsVariation = EditorGUILayout.FloatField("Hit points variation", flammableObjectData.hitPointsVariation);
         flammableObjectData.regeneration = EditorGUILayout.FloatField("Object regeneration (if any)", flammableObjectData.regeneration);
         flammableObjectData.fireRadius = EditorGUILayout.FloatField("Fire radius", flammableObjectData.fireRadius);
+        flammableObjectData.isBreakable = EditorGUILayout.Toggle("Is breakable?", flammableObjectData.isBreakable);
         flammableObjectData.isBlockingPropagation = EditorGUILayout.Toggle("Block propagation?", flammableObjectData.isBlockingPropagation);
         flammableObjectData.isExplodingOnDeath = EditorGUILayout.Toggle("Explode on death?", flammableObjectData.isExplodingOnDeath);
 
