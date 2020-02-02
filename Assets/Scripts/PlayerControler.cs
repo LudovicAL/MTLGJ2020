@@ -156,7 +156,7 @@ public class PlayerControler : MonoBehaviour {
 					Grabbable grabComponent = hit.gameObject.GetComponent<Grabbable>();
 					if (grabComponent.owner == null)
 					{
-						grabComponent.owner = this;
+						grabComponent.Pickup(this);
 						grabbedObject = grabComponent;
 						break;
 					}
@@ -171,7 +171,7 @@ public class PlayerControler : MonoBehaviour {
 
 	public void DropGrabbedObject()
 	{
-		grabbedObject.owner = null;
+		grabbedObject.Drop();
 		grabbedObject = null;
 	}
 

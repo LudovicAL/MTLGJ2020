@@ -10,11 +10,13 @@ public class Grabbable : MonoBehaviour
     [HideInInspector]
     public PlayerControler owner;
     private Rigidbody2D rigidBody;
+    private ConstantForce2D constantForce;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        constantForce = GetComponent<ConstantForce2D>();
     }
 
     // Update is called once per frame
@@ -31,11 +33,24 @@ public class Grabbable : MonoBehaviour
         {
 
             owner.DropGrabbedObject();
-            rigidBody.velocity = Vector2.zero;
+            Drop();
             return;
         }
 
         direction = direction.normalized;
         rigidBody.velocity = direction * speed;
+    }
+
+    public void Pickup(PlayerControler pickupPlayer)
+    {
+        owner = pickupPlayer;
+        if (constantForce) constantForce.enabled = false;
+    }
+
+    public void Drop()
+    {
+        owner = null;
+        if (constantForce) constantForce.enabled = true;
+        rigidBody.velocity = Vector2.zero;
     }
 }
