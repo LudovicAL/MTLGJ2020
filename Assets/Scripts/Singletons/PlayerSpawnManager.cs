@@ -25,6 +25,8 @@ public class PlayerSpawnManager : MonoBehaviour {
 	private void OnPlayerJoinsGame(PlayerId playerId, bool gameFull) {
 		playerId.avatar = Instantiate(avatarPrefab, playerId.spawnPosition, Quaternion.identity);
 		playerId.avatar.GetComponent<Player>().playerId = playerId;
+		playerId.player = playerId.avatar.GetComponent<Player>();
+		playerId.player.casque.color = playerId.color;
 	}
 
 	private void OnPlayerLeavesGame(PlayerId playerId) {

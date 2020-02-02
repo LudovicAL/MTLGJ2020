@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Player))]
 public class Player : MonoBehaviour {
 	public PlayerId playerId;
+	public SpriteRenderer casque;
 	[HideInInspector] public PlayerControler playerControler;
 
     // Use this for initialization
