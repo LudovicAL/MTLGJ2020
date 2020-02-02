@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d1b82b9bd3f2d4eac9e1006ece181d, type: 3}
   m_Name: PropaneTank
   m_EditorClassIdentifier: 
-  hitPoints: 0
+  hitPoints: 1
   hitPointsVariation: 0
   regeneration: 0
   explosionRadius: 0
+  isBreakable: 0
   isExplodingOnDeath: 0
   isBlockingPropagation: 0
   damageOnDeath: 0
+  fireRadius: 0
