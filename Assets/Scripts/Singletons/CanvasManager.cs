@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CanvasManager : MonoBehaviour {
 
@@ -12,7 +13,7 @@ public class CanvasManager : MonoBehaviour {
 	public GameObject panelEnding;
 	public Text countDownText;
 	public static CanvasManager Instance { get; private set; }
-
+	private TextMeshPro victimsText;
 	private GameObject _houseIntegritySlider;
 
 	private void Awake() {
@@ -26,9 +27,10 @@ public class CanvasManager : MonoBehaviour {
 
 	// Start is called before the first frame update
 	void Start() {
-
+		victimsText = transform.Find("Panel Playing").Find("VictimText").GetComponent<TextMeshPro>();
 		EventsManager.Instance.gameStateChanges.AddListener(OnGameStateChanges);
 		EventsManager.Instance.houseIntegrityChanges.AddListener(HouseIntegrityChanges);
+		EventsManager.Instance.victimSaved.AddListener(VictimSaved);
 		OnGameStateChanges();
 	}
 
@@ -88,6 +90,13 @@ public class CanvasManager : MonoBehaviour {
 				image.color.b - _houstIntegrityIncrement
 			);
 			Debug.Log(image.color);
+		}
+	}
+
+	private void VictimSaved()
+	{
+		if (victimsText != null) {
+			victimsText.text = $"victims: {EventsManager.Instance.victimSaved.savedVictims}/{EventsManager.Instance.victimSaved.numVictims}";
 		}
 	}
 

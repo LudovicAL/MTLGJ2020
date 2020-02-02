@@ -19,11 +19,15 @@ public class Safezone : MonoBehaviour
         transform.localScale = new Vector3(radius, radius, 1);
 
         victims = GameObject.FindGameObjectsWithTag("Victim");
+        SendSavedVictimsEvents();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (GameStatesManager.Instance.gameState != GameStatesManager.AvailableGameStates.Playing)
+            return;
+
         if (victims.Length == 0)
             return;
 
@@ -52,11 +56,29 @@ public class Safezone : MonoBehaviour
                     if (grabbable.owner) grabbable.owner.DropGrabbedObject(true);
                 }
     
-                Debug.Log($"Saved {parent.name}!");
-
                 // remove from list
                 victims[i] = null;
+
+                Debug.Log($"Saved {parent.name}!");
+                SendSavedVictimsEvents();
             }
+        }
+    }
+
+    void SendSavedVictimsEvents()
+    {
+        int numSaved = 0;
+        foreach (GameObject victim in victims)
+            if (victim != null) numSaved++;
+
+        EventsManager.Instance.victimSaved.savedVictims = numSaved;
+        EventsManager.Instance.victimSaved.numVictims = victims.Length;
+        EventsManager.Instance.victimSaved.Invoke();
+        
+        if (numSaved == victims.Length)
+        {
+            GameStatesManager.Instance.ChangeGameStateTo(GameStatesManager.AvailableGameStates.Ending);
+            enabled = false;
         }
     }
 }

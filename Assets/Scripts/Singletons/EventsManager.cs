@@ -34,6 +34,12 @@ public class HouseIntegrityChanges : UnityEvent {
 
 }
 
+public class VictimSaved : UnityEvent {
+	public int numVictims;
+	public int savedVictims;
+}
+
+
 public class EventsManager : MonoBehaviour {
 
 	public PlayerCollidesWithDoor playerCollidesWithDoor;
@@ -42,6 +48,7 @@ public class EventsManager : MonoBehaviour {
 	public PlayerLeavesGame playerLeavesGame;
 	public GameStateChanges gameStateChanges;
 	public HouseIntegrityChanges houseIntegrityChanges;
+	public VictimSaved victimSaved;
 
 	public static EventsManager Instance {get; private set;}
 
@@ -70,6 +77,9 @@ public class EventsManager : MonoBehaviour {
 		}
 		if (houseIntegrityChanges == null) {
 			houseIntegrityChanges = new HouseIntegrityChanges();
+		}
+		if (victimSaved == null) {
+			victimSaved = new VictimSaved();
 		}
 	}
 }
