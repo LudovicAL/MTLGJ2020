@@ -15,8 +15,8 @@ RAF:<br>
   Les flammes apparaissent aléatoirement au début du jeu<br>
   Les victimes apparaissent aléatoirement au début du jeu<br>
   Les victimes peuvent être sauvées lorsqu'elles sont ramenées au camion de pompier (Aurelie)<br>
-  Les victimes ragdoll (Chris)<br>
-  Explosion (Chris)<br>
-  Fire extinguisher (Aurelie)<br>
+  <s>Les victimes ragdoll (Chris)</s><br>
+  <s>Explosion (Chris)</s><br>
+  <s>Fire extinguisher (Aurelie)</s><br>
   Il y a un camion de pompier<br>
   Le camion de pompier peut être conduit/déplacé<br>
