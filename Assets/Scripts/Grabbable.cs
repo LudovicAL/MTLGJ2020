@@ -59,7 +59,7 @@ public class Grabbable : MonoBehaviour
         }
 
 		direction = direction.normalized;
-		rigidBody.velocity = direction * speed * 1.2f; // 20% extra speed to better match player
+		rigidBody.velocity = direction * speed * 5f; // extra speed to better match player
 	}	
 
 	public virtual void Pickup(PlayerControler pickupPlayer)

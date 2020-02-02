@@ -5,14 +5,14 @@ using UnityEngine;
 public class FireHoseGrabbable : Grabbable
 {
     public Transform stream;
-    private ConstantForce2D constantForce;
+    private ConstantForce2D constantForce2D;
     private float initTimer = 1f;
 
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
-        constantForce = GetComponent<ConstantForce2D>();
+        constantForce2D = GetComponent<ConstantForce2D>();
     }
 
     public override void UpdateInternal()
@@ -25,7 +25,7 @@ public class FireHoseGrabbable : Grabbable
             initTimer -= Time.deltaTime;
             if (initTimer <= 0f)
             {
-                if (constantForce) constantForce.enabled = false;
+                if (constantForce2D) constantForce2D.enabled = false;
                 if (stream) stream.gameObject.SetActive(false);
                 rigidBody.velocity = Vector2.zero;
             }
@@ -35,14 +35,14 @@ public class FireHoseGrabbable : Grabbable
     public override void Pickup(PlayerControler pickupPlayer)
     {
         base.Pickup(pickupPlayer);
-        if (constantForce) constantForce.enabled = false;
+        if (constantForce2D) constantForce2D.enabled = false;
         if (stream) stream.gameObject.SetActive(false);
     }
 
     public override void Drop(bool intentional)
     {
         base.Drop(intentional);
-        if (constantForce) constantForce.enabled = !intentional;
+        if (constantForce2D) constantForce2D.enabled = !intentional;
         if (stream) stream.gameObject.SetActive(!intentional);
     }
     public override void Aim(bool start)
