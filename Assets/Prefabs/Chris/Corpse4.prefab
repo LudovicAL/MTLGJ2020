@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 8424154002449845111}
   m_Layer: 12
   m_Name: C4-body
-  m_TagString: Untagged
+  m_TagString: Victim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
