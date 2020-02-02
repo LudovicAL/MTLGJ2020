@@ -20,6 +20,7 @@ public class AxeGrabbable : Grabbable {
 	public override void Drop(bool intentional) {
 		GetComponent<SpriteRenderer>().enabled = true;
 		transform.position = owner.transform.position;
+		transform.rotation = Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f));
 		owner.isAxing = false;
 		owner = null;
 	}
