@@ -51,8 +51,9 @@ public class CanvasManager : MonoBehaviour {
 			}
 		}
 		_houseIntegrityHitPoints = wallList.Count;
-		RectTransform rectTransform = _houseIntegritySlider.GetComponent<RectTransform>();
-		_houstIntegrityIncrement = -rectTransform.offsetMax.x / _houseIntegrityHitPoints;
+		Debug.Log(_houseIntegrityHitPoints);
+		_houstIntegrityIncrement = 1.0f / _houseIntegrityHitPoints;
+		Debug.Log(_houstIntegrityIncrement);
 	}
 
 	//Called when the GameState changes
@@ -81,8 +82,14 @@ public class CanvasManager : MonoBehaviour {
 	private void HouseIntegrityChanges()
 	{
 		if (_houseIntegritySlider != null) {
-			RectTransform rectTransform = _houseIntegritySlider.GetComponent<RectTransform>();
-			rectTransform.offsetMax += new Vector2(_houstIntegrityIncrement, 0);
+			Image image = _houseIntegritySlider.GetComponent<Image>();
+			Debug.Log(image.color);
+			image.color = new Color(
+				image.color.r,
+				image.color.g - _houstIntegrityIncrement,
+				image.color.b - _houstIntegrityIncrement
+			);
+			Debug.Log(image.color);
 		}
 	}
 
