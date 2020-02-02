@@ -1,4 +1,5 @@
 ﻿using Unity.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FireManager : MonoBehaviour
@@ -7,6 +8,8 @@ public class FireManager : MonoBehaviour
     public static FireManager Instance { get; private set; }
     public GameObject _fire;
     public GameObject _explosion;
+    public GameObject[] _replacementFloorTile;
+    public List<GameObject> _flammableObjects;
 
     void Awake()
     {
@@ -20,10 +23,22 @@ public class FireManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
     }
+	void Start() {
+
+		EventsManager.Instance.houseAppears.AddListener(SetFlammables);
+	}
 
     void Update()
     {
         PropagateFire();
+    }
+
+    public void SpawnDestroyedTile(GameObject source, GameObject[] target) {
+        if (target != null) {
+            Debug.Log("OK");
+            int index = Random.Range (0, target.Length);
+            Instantiate(target[index], source.transform.position, Quaternion.identity);
+        }
     }
 
     public void SpawnFire(GameObject source, float radius)
@@ -45,8 +60,7 @@ public class FireManager : MonoBehaviour
 
     public void PropagateFire()
     {
-        GameObject[] flammableObjects = GameObject.FindGameObjectsWithTag("Flammable");
-        foreach (GameObject flammableObject in flammableObjects)
+        foreach (GameObject flammableObject in _flammableObjects)
         {
             FlammableObject flammableEntity = flammableObject.GetComponent<FlammableObject>();
             if (flammableEntity._isOnFire)
@@ -57,5 +71,10 @@ public class FireManager : MonoBehaviour
             }
             
         }
+    }
+
+    public void SetFlammables() {
+        _flammableObjects = new List<GameObject>();
+        _flammableObjects.AddRange(GameObject.FindGameObjectsWithTag("Flammable"));
     }
 }

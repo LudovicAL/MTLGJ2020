@@ -47,5 +47,6 @@ public class GameStartManager : MonoBehaviour {
 		for (int i = 0, max = PlayerListManager.Instance.listOfPlayers.Count; i < max; i++) {
 			PlayerListManager.Instance.listOfPlayers[i].avatar.transform.position = spawnList[i].transform.position;
 		}
+		EventsManager.Instance.houseAppears.Invoke();
 	}
 }

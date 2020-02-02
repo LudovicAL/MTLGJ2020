@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7691002870021746950}
   m_Layer: 9
   m_Name: Carpet_beige
-  m_TagString: Untagged
+  m_TagString: Flammable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

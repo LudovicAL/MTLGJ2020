@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: Bed
   m_EditorClassIdentifier: 
   hitPoints: 5
+  hitPointsVariation: 1
   regeneration: 0.1
-  explodeOnDeath: 0
+  explosionRadius: 0
+  isBreakable: 0
+  isExplodingOnDeath: 0
+  isBlockingPropagation: 0
   damageOnDeath: 0
+  fireRadius: 2

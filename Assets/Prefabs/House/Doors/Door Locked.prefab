@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5103005217945942358}
   - component: {fileID: 6944226786784483889}
   - component: {fileID: 8353949820477749840}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Door Locked
-  m_TagString: Untagged
+  m_TagString: Flammable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -83,13 +83,11 @@ public class CanvasManager : MonoBehaviour {
 	{
 		if (_houseIntegritySlider != null) {
 			Image image = _houseIntegritySlider.GetComponent<Image>();
-			Debug.Log(image.color);
 			image.color = new Color(
 				image.color.r,
 				image.color.g - _houstIntegrityIncrement,
 				image.color.b - _houstIntegrityIncrement
 			);
-			Debug.Log(image.color);
 		}
 	}
 

@@ -13,9 +13,11 @@ GameObject:
   - component: {fileID: 1305497076401054584}
   - component: {fileID: 1305497076401054585}
   - component: {fileID: 1305497076401054590}
-  m_Layer: 0
+  - component: {fileID: 2866784491460104846}
+  - component: {fileID: 4776554469771372298}
+  m_Layer: 13
   m_Name: DoorPanel
-  m_TagString: Untagged
+  m_TagString: Flammable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +144,7 @@ HingeJoint2D:
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 1305497077362869161}
+  m_ConnectedRigidBody: {fileID: 6586175543561787321}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
@@ -156,6 +158,36 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -90
     m_UpperAngle: 90
+--- !u!114 &2866784491460104846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305497076401054581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced554fe3c0445c46a26d488d56d4156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flammableObjectData: {fileID: 11400000, guid: 48432ec4a709787449056769a7655003,
+    type: 2}
+  _isOnFire: 0
+  _fireDamage: 0.01
+  _currentHitPoints: 0
+  _maxHitPoints: 0
+--- !u!114 &4776554469771372298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305497076401054581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84856103ca3c90d4f9abb58bfb589532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1305497077362869157
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,10 +197,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1305497077362869163}
-  - component: {fileID: 1305497077362869161}
   - component: {fileID: 1305497077362869162}
-  - component: {fileID: 7737370223018954039}
-  m_Layer: 0
+  - component: {fileID: 6586175543561787321}
+  m_Layer: 13
   m_Name: Door Unlocked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,27 +221,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1305497077362869161
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1305497077362869157}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!212 &1305497077362869162
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -248,7 +258,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -840039661
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 2
   m_Sprite: {fileID: 121307057000013791, guid: 096f765679849994a83abcccdc590b7a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -261,21 +271,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7737370223018954039
-MonoBehaviour:
+--- !u!50 &6586175543561787321
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305497077362869157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced554fe3c0445c46a26d488d56d4156, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _flammableObjectData: {fileID: 11400000, guid: 48432ec4a709787449056769a7655003,
-    type: 2}
-  _isOnFire: 0
-  _fireDamage: 0.01
-  _currentHitPoints: 0
-  _maxHitPoints: 0
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

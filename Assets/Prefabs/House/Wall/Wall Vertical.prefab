@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9069433265296247774}
   m_Layer: 13
   m_Name: Wall Vertical
-  m_TagString: Wall
+  m_TagString: Flammable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -490059235
-  m_SortingLayer: -1
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 76055979917861260, guid: 113e7a29cba1a4c40bbdd26f2a8901ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -117,7 +117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ced554fe3c0445c46a26d488d56d4156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fireManager: {fileID: 0}
   _flammableObjectData: {fileID: 11400000, guid: 0f7345fd95c51a041984914ecebcc464,
     type: 2}
   _isOnFire: 0

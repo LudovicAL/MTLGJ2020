@@ -39,6 +39,9 @@ public class VictimSaved : UnityEvent {
 	public int savedVictims;
 }
 
+public class HouseAppears : UnityEvent {
+
+}
 
 public class EventsManager : MonoBehaviour {
 
@@ -49,6 +52,7 @@ public class EventsManager : MonoBehaviour {
 	public GameStateChanges gameStateChanges;
 	public HouseIntegrityChanges houseIntegrityChanges;
 	public VictimSaved victimSaved;
+	public HouseAppears houseAppears;
 
 	public static EventsManager Instance {get; private set;}
 
@@ -80,6 +84,8 @@ public class EventsManager : MonoBehaviour {
 		}
 		if (victimSaved == null) {
 			victimSaved = new VictimSaved();
+		if (houseAppears == null) {
+			houseAppears = new HouseAppears();
 		}
 	}
 }

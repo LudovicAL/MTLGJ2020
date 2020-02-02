@@ -1519,3 +1519,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fire: {fileID: 1834733583881507474, guid: 987ccd7cd546f7f429972ed3033e874c, type: 3}
   _explosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
+  _replacementFloorTile:
+  - {fileID: 3176068833204167577, guid: 5e6ba75772f02544db5ac9dc7ccadfd5, type: 3}
+  - {fileID: 746575215892235157, guid: fb671c308398e9e4091180186d20bd94, type: 3}
+  - {fileID: 8906563815380861221, guid: 230d78281d291e9468966419b087ae06, type: 3}
+  - {fileID: 7673589468092066418, guid: 13ef92b800574114ab45aa642480dfff, type: 3}

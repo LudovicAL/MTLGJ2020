@@ -51,14 +51,4 @@ public class Fire : MonoBehaviour
             flammableObject._isOnFire = false;
         }
     }
-
-    void OnParticleCollision(GameObject collision) {
-        Debug.Log(collision);
-        if (collision.tag == "FireStarter") {
-            this._hitPoints -= 10.0f;
-        }
-        if (this._hitPoints <= 0.0f){
-            Destroy(gameObject);
-        }
-    }
 }

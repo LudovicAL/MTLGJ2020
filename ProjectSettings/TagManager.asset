@@ -63,9 +63,9 @@ TagManager:
   - name: Character
     uniqueID: 2639229113
     locked: 0
-  - name: Fire
-    uniqueID: 3804908061
-    locked: 0
   - name: DoorFrame
     uniqueID: 3454927635
+    locked: 0
+  - name: Fire
+    uniqueID: 3804908061
     locked: 0
