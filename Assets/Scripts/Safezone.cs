@@ -67,6 +67,9 @@ public class Safezone : MonoBehaviour
 
     void SendSavedVictimsEvents()
     {
+        if (victims.Length == 0)
+            return;
+
         int numSaved = 0;
         foreach (GameObject victim in victims)
             if (victim != null) numSaved++;
