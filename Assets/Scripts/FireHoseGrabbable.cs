@@ -13,6 +13,7 @@ public class FireHoseGrabbable : Grabbable
     {
         base.Start();
         constantForce2D = GetComponent<ConstantForce2D>();
+        if (stream) stream.gameObject.SetActive(false);
     }
 
     public override void UpdateInternal()
@@ -26,7 +27,6 @@ public class FireHoseGrabbable : Grabbable
             if (initTimer <= 0f)
             {
                 if (constantForce2D) constantForce2D.enabled = false;
-                if (stream) stream.gameObject.SetActive(false);
                 rigidBody.velocity = Vector2.zero;
             }
         }
