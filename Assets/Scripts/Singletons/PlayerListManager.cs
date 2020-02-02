@@ -31,16 +31,19 @@ public class PlayerListManager : MonoBehaviour {
 			for (int i = listOfPlayers.Count - 1; i >= 0; i--) {
 				if (listOfPlayers[i].controls.GetButtonBDown()) {
 					RemovePlayer(listOfPlayers[i]);
+					break;
 				}
 			}
 			for (int i = listOfAvailablePlayers.Count - 1; i >= 0; i--) {
 				if (listOfAvailablePlayers[i].controls.GetButtonADown()) {
 					AddPlayer(listOfAvailablePlayers[i]);
+					break;
 				}
 			}
 			for (int i = 0, max = listOfPlayers.Count; i < max; i++) {
 				if (listOfPlayers[i].controls.GetButtonStartDown()) {
 					GameStatesManager.Instance.ChangeGameStateTo(GameStatesManager.AvailableGameStates.Starting);
+					break;
 				}
 			}
 		}
