@@ -609,6 +609,8 @@ GameObject:
   - component: {fileID: 3381228446124431930}
   - component: {fileID: 3381228446124431909}
   - component: {fileID: 3381228446124431929}
+  - component: {fileID: 6885576863524306288}
+  - component: {fileID: 7001041490289512127}
   m_Layer: 12
   m_Name: C1-head
   m_TagString: Untagged
@@ -787,6 +789,36 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -30
     m_UpperAngle: 30
+--- !u!114 &6885576863524306288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3381228446124431911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced554fe3c0445c46a26d488d56d4156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flammableObjectData: {fileID: 11400000, guid: e74217bb3e489de47a584c4af1ac2707,
+    type: 2}
+  _isOnFire: 0
+  _fireDamage: 0.01
+  _currentHitPoints: 0
+  _maxHitPoints: 0
+--- !u!114 &7001041490289512127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3381228446124431911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84856103ca3c90d4f9abb58bfb589532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3381228446183983567
 GameObject:
   m_ObjectHideFlags: 0

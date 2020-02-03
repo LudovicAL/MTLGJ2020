@@ -1462,6 +1462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3454132328064549234}
+  - component: {fileID: -4401720659208921566}
   m_Layer: 12
   m_Name: Corpse3
   m_TagString: Untagged
@@ -1491,3 +1492,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-4401720659208921566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7151666463770326664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced554fe3c0445c46a26d488d56d4156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flammableObjectData: {fileID: 11400000, guid: e74217bb3e489de47a584c4af1ac2707,
+    type: 2}
+  _isOnFire: 0
+  _fireDamage: 0.01
+  _currentHitPoints: 0
+  _maxHitPoints: 0
