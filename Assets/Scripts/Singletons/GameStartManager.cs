@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameStartManager : MonoBehaviour {
 
+	public GameObject flamePrefab;
 	public List<GameObject> availableHouses;
 	public static GameStartManager Instance { get; private set;}
 
@@ -47,6 +48,8 @@ public class GameStartManager : MonoBehaviour {
 		for (int i = 0, max = PlayerListManager.Instance.listOfPlayers.Count; i < max; i++) {
 			PlayerListManager.Instance.listOfPlayers[i].avatar.transform.position = spawnList[i].transform.position;
 		}
+		GameObject[] listOfFlammables = GameObject.FindGameObjectsWithTag("Flammable");
+		Instantiate(flamePrefab, listOfFlammables[Random.Range(0, listOfFlammables.Length)].transform.position, Quaternion.identity);
 		EventsManager.Instance.houseAppears.Invoke();
 	}
 }
