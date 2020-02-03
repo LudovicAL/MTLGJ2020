@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a24aad20ac38f54b8418bdb0d87547e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
   dropDistance: 1
   owner: {fileID: 0}
   attachOffset: {x: 0, y: 0}
